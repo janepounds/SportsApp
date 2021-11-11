@@ -1,6 +1,6 @@
 package com.example.flashsports.ui.fragments.businessInfo.businessDocuments
 
-import `in`.mayanknagwanshi.imagepicker.ImageSelectActivity
+
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -33,9 +33,6 @@ import com.example.flashsports.ui.base.BaseFragment
 import com.example.flashsports.ui.viewModels.FilesViewModel
 import com.example.flashsports.ui.viewModels.ViewModelFactory
 import com.example.flashsports.utils.*
-import com.jaiselrahman.filepicker.activity.FilePickerActivity
-import com.jaiselrahman.filepicker.config.Configurations
-import com.jaiselrahman.filepicker.model.MediaFile
 import com.pixplicity.easyprefs.library.Prefs
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope

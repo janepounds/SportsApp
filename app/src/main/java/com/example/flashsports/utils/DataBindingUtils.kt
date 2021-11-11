@@ -82,7 +82,7 @@ fun MaterialTextView.setStatusText(loanStatus: LoanStatus) {
             this.setBackgroundResource(R.drawable.slider_bg_with_stroke_6)
         }
         LoanStatus.PARTIALLY_PAID->{
-            this.setTextColor(ContextCompat.getColorStateList(this.context, R.color.colorAccent))
+            this.setTextColor(ContextCompat.getColorStateList(this.context, R.color.blue))
             this.setBackgroundResource(R.drawable.slider_bg_with_stroke_6)
         }
 

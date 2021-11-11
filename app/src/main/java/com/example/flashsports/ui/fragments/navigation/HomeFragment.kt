@@ -33,7 +33,6 @@ import com.example.flashsports.ui.viewModels.FilesViewModel
 import com.example.flashsports.ui.viewModels.LoanViewModel
 import com.example.flashsports.utils.*
 import com.example.flashsports.utils.calculation.CalculationUtils
-import com.freshchat.consumer.sdk.Freshchat
 import com.pixplicity.easyprefs.library.Prefs
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
@@ -127,7 +126,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun setupClickListeners() {
         binding.withdrawFundsCardView.setOnClickListener { navController.navigate(R.id.action_homeFragment_to_withdrawFundsFragment) }
         binding.myLoansCardView.setOnClickListener { navController.navigate(R.id.action_homeFragment_to_myLoansFragment) }
-        binding.livechatMessaging.setOnClickListener{ Freshchat.showConversations(requireContext())}
+        binding.livechatMessaging.setOnClickListener{ }
     }
     private fun refreshUserData(){
         var call: Call<BalanceAndPaymentResponse>? = apiRequests?.refreshUserData(

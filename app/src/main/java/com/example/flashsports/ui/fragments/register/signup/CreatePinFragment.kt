@@ -18,8 +18,7 @@ import com.example.flashsports.ui.fragments.register.RegisterFragment
 import com.example.flashsports.ui.viewModels.FilesViewModel
 import com.example.flashsports.ui.viewModels.LoginViewModel
 import com.example.flashsports.utils.*
-import com.freshchat.consumer.sdk.Freshchat
-import com.freshchat.consumer.sdk.FreshchatUser
+
 import com.pixplicity.easyprefs.library.Prefs
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -129,17 +128,6 @@ class CreatePinFragment : BaseFragment<FragmentCreatePinBinding>() {
                                         Prefs.putString("payment_due", it!!.data?.payment_due.toString())
                                         Prefs.putString("payment_due_date",it!!.data?.payment_due_date)
                                         userPreferences.saveIsLoggedIn(true)
-
-                                        //save user info in Fresh desk
-                                        // Get the user object for the current installation
-                                        var freshChatUser = Freshchat.getInstance(context!!).user
-                                        freshChatUser.firstName = getFirstName(it!!.data?.name!!)
-                                        freshChatUser.lastName = getLastName(it!!.data?.name!!)
-                                        freshChatUser.email = it!!.data?.email
-                                        freshChatUser.setPhone("+256", it!!.data?.phoneNumber!!.substring(3))
-
-                                        // Call setUser so that the user information is synced with Freshchat's servers
-                                        Freshchat.getInstance(context!!).user = freshChatUser
 
                                     }
                                 }

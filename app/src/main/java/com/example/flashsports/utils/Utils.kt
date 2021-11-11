@@ -132,7 +132,7 @@ fun showDialog(context: Context,description: String,title:String){
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
         alertDialog.window!!.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         alertDialog.window!!.statusBarColor =
-            ContextCompat.getColor(context, R.color.colorPrimaryDark)
+            ContextCompat.getColor(context, R.color.primaryColor)
     }
 
     dialog_button.setOnClickListener { alertDialog.dismiss() }

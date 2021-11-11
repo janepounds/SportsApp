@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.SplashFragment"
+        android:name="com.example.flashsports.ui.fragments.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
         <action
@@ -26,19 +26,19 @@
 
     <fragment
         android:id="@+id/introFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.IntroFragment"
+        android:name="com.example.flashsports.ui.fragments.IntroFragment"
         android:label="fragment_intro"
         tools:layout="@layout/fragment_intro" />
 
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.register.WelcomeFragment"
+        android:name="com.example.flashsports.ui.fragments.register.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" />
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.register.RegisterFragment"
+        android:name="com.example.flashsports.ui.fragments.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register">
         <action
@@ -52,7 +52,7 @@
 
     <fragment
         android:id="@+id/otpVerifyFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.register.signup.OtpVerifyFragment"
+        android:name="com.example.flashsports.ui.fragments.register.signup.OtpVerifyFragment"
         android:label="OtpVerifyFragment"
         tools:layout="@layout/fragment_otp_verify">
         <action
@@ -69,19 +69,19 @@
 
     <fragment
         android:id="@+id/createPinFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.register.signup.CreatePinFragment"
+        android:name="com.example.flashsports.ui.fragments.register.signup.CreatePinFragment"
         android:label="CreatePinFragment"
         tools:layout="@layout/fragment_create_pin" />
 
     <fragment
         android:id="@+id/changePinFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.ChangePinFragment"
+        android:name="com.example.flashsports.ui.fragments.ChangePinFragment"
         android:label="CreatePinFragment"
         tools:layout="@layout/fragment_change_pin" />
 
     <fragment
         android:id="@+id/enterPinFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.EnterPinFragment"
+        android:name="com.example.flashsports.ui.fragments.EnterPinFragment"
         android:label="EnterPinFragment"
         tools:layout="@layout/fragment_enter_pin" >
 
@@ -92,7 +92,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.navigation.HomeFragment"
+        android:name="com.example.flashsports.ui.fragments.navigation.HomeFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_home">
         <action
@@ -118,7 +118,7 @@
 
     <fragment
         android:id="@+id/myBusinessFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.navigation.MyBusinessFragment"
+        android:name="com.example.flashsports.ui.fragments.navigation.MyBusinessFragment"
         android:label="@string/title_my_business"
         tools:layout="@layout/fragment_my_business">
         <action
@@ -146,13 +146,13 @@
 
     <fragment
         android:id="@+id/creditScoreFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.navigation.CreditScoreFragment"
+        android:name="com.example.flashsports.ui.fragments.navigation.CreditScoreFragment"
         android:label="@string/title_credit_score"
         tools:layout="@layout/fragment_credit_score" />
 
     <fragment
         android:id="@+id/accountFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.navigation.AccountFragment"
+        android:name="com.example.flashsports.ui.fragments.navigation.AccountFragment"
         android:label="@string/title_account"
         tools:layout="@layout/fragment_account" >
         <action
@@ -173,7 +173,7 @@
     <!--    Business Info-->
     <fragment
         android:id="@+id/enterPersonalDetailsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.ownerProfile.EnterPersonalDetailsFragment"
+        android:name="com.example.flashsports.ui.fragments.businessInfo.ownerProfile.EnterPersonalDetailsFragment"
         android:label="EnterPersonalDetailsFragment"
         tools:layout="@layout/fragment_enter_personal_details">
         <action
@@ -187,7 +187,7 @@
 
     <fragment
         android:id="@+id/enterContactDetailsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.ownerProfile.EnterContactDetailsFragment"
+        android:name="com.example.flashsports.ui.fragments.businessInfo.ownerProfile.EnterContactDetailsFragment"
         android:label="EnterContactDetailsFragment"
         tools:layout="@layout/fragment_enter_contact_details">
         <action
@@ -201,7 +201,7 @@
 
     <fragment
         android:id="@+id/enterGuarantorDetailsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.ownerProfile.EnterGuarantorDetailsFragment"
+        android:name="com.example.flashsports.ui.fragments.businessInfo.ownerProfile.EnterGuarantorDetailsFragment"
         android:label="EnterGuarantorDetailsFragment"
         tools:layout="@layout/fragment_enter_guarantor_details">
         <action
@@ -215,14 +215,14 @@
 
     <fragment
         android:id="@+id/uploadIdDocumentsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.ownerProfile.UploadIdDocumentsFragment"
+        android:name="com.example.flashsports.ui.fragments.businessInfo.ownerProfile.UploadIdDocumentsFragment"
         android:label="UploadIdDocumentsFragment"
         tools:layout="@layout/fragment_upload_id_documents" />
 
 
     <fragment
         android:id="@+id/enterBusinessDetailsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.businessProfile.EnterBusinessDetailsFragment"
+        android:name="com.example.flashsports.ui.fragments.businessInfo.businessProfile.EnterBusinessDetailsFragment"
         android:label="EnterBusinessDetailsFragment"
         tools:layout="@layout/fragment_enter_business_details">
         <action
@@ -236,14 +236,14 @@
 
     <fragment
         android:id="@+id/verificationDocumentsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.businessProfile.VerificationDocumentsFragment"
+        android:name="com.example.flashsports.ui.fragments.businessInfo.businessProfile.VerificationDocumentsFragment"
         android:label="VerificationDocumentsFragment"
         tools:layout="@layout/fragment_verification_documents" />
 
 
     <fragment
         android:id="@+id/uploadBusinessDocumentsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.businessDocuments.UploadBusinessDocumentsFragment"
+        android:name="com.example.flashsports.ui.fragments.businessInfo.businessDocuments.UploadBusinessDocumentsFragment"
         android:label="UploadBusinessDocumentsFragment"
         tools:layout="@layout/fragment_upload_business_documents" />
 
@@ -251,31 +251,31 @@
     <!--    Home-->
     <fragment
         android:id="@+id/myLoansFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.home.MyLoansFragment"
+        android:name="com.example.flashsports.ui.fragments.home.MyLoansFragment"
         android:label="MyLoansFragment"
         tools:layout="@layout/fragment_my_loans" />
 
     <fragment
         android:id="@+id/loanConfirmationFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.home.LoanConfirmationFragment"
+        android:name="com.example.flashsports.ui.fragments.home.LoanConfirmationFragment"
         android:label="LoanConfirmationFragment"
         tools:layout="@layout/fragment_loan_confirmation" />
 
     <fragment
         android:id="@+id/withdrawFundsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.home.WithdrawFundsFragment"
+        android:name="com.example.flashsports.ui.fragments.home.WithdrawFundsFragment"
         android:label="WithdrawFundsFragment"
         tools:layout="@layout/fragment_withdraw_funds" />
 
     <fragment
         android:id="@+id/makePaymentsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.home.MakePaymentsFragment"
+        android:name="com.example.flashsports.ui.fragments.home.MakePaymentsFragment"
         android:label="MakePaymentsFragment"
         tools:layout="@layout/fragment_make_payments" />
 
     <fragment
         android:id="@+id/loanDetailsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.home.LoanDetailsFragment"
+        android:name="com.example.flashsports.ui.fragments.home.LoanDetailsFragment"
         android:label="LoanDetailsFragment"
         tools:layout="@layout/fragment_loan_details">
         <action
@@ -289,7 +289,7 @@
 
     <fragment
         android:id="@+id/transferredSuccessfullyFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.home.TransferredSuccessfullyFragment"
+        android:name="com.example.flashsports.ui.fragments.home.TransferredSuccessfullyFragment"
         android:label="TransferredSuccessfullyFragment"
         tools:layout="@layout/fragment_transferred_successfully" />
 
@@ -353,7 +353,7 @@
 
     <fragment
         android:id="@+id/passwordResetSuccessFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.home.PasswordResetSuccessFragment"
+        android:name="com.example.flashsports.ui.fragments.home.PasswordResetSuccessFragment"
         android:label="PasswordResetSuccessFragment" >
         <action
             android:id="@+id/action_passwordResetSuccessFragment_to_createPinFragment"
@@ -361,15 +361,15 @@
     </fragment>
     <fragment
         android:id="@+id/updateAccountDetailsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.UpdateAccountDetailsFragment"
+        android:name="com.example.flashsports.ui.fragments.UpdateAccountDetailsFragment"
         android:label="UpdateAccountDetailsFragment" />
     <fragment
         android:id="@+id/sendEmailFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.SendEmailFragment"
+        android:name="com.example.flashsports.ui.fragments.SendEmailFragment"
         android:label="SendEmailFragment" />
     <fragment
         android:id="@+id/FAQsFragment"
-        android:name="com.cabral.emaishapay.ui.fragments.FAQsFragment"
+        android:name="com.example.flashsports.ui.fragments.FAQsFragment"
         android:label="FAQsFragment" />
 
 </navigation>
