@@ -6,8 +6,26 @@
         <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2890625" />
         <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/drawable/app_logo.xml" value="0.2890625" />
         <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2890625" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/activity_image_picker.xml" value="0.1390625" />
         <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/activity_main.xml" value="0.12864583333333332" />
         <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/dialog_loading_progress.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/dialog_loan_status.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/dialog_payment_status.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/dialog_webview_fullscreen.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/fragment_home.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/fragment_loan_history.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/fragment_my_business.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/fragment_transferred_successfully.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/fragment_update_acount_details.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/item_credit_factor.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/item_loan.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/item_transaction.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/layout_account_above.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/layout_account_customer_support_expandable.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/layout_business_expandable.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/layout_home_viewpager.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/layout_intro.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/layout/layout_keypad.xml" value="0.14270833333333333" />
         <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/menu/bottom_nav_menu.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.15885416666666666" />
         <entry key="..\:/Users/Pounds/AndroidStudioProjects/FlashSports/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.15885416666666666" />

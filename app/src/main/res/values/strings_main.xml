@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    /// My Business
+    <string name="hi_user">Hi %s</string>
+    <string name="add_business_info">Add Your Business Information</string>
+    <string name="add_business_info_subtitle">To access quick, affordable and collateral free working Capital loans to grow your business</string>
+    <string name="click_to_expand_tab">Click to expand tab</string>
+    <string name="click_to_collapse_tab">Click to collapse tab</string>
+    <string name="owner_profile">Owner\'s Profile</string>
+    <string name="business_profile">Business Profile</string>
+    <string name="revenue">Revenue</string>
+    <string name="financial_history">Financial History</string>
+    <string name="business_documents">Business Documents</string>
+    <string name="need_help">Need Help?</string>
+    <string name="name">Name :</string>
+    <string name="dob">DOB :</string>
+    <string name="nin">NIN :</string>
+    <string name="reg_date">Reg Date :</string>
+    <string name="location">Location :</string>
+    <string name="trade_license">Trade License :</string>
+    <string name="reg_certificate">Reg Certificate :</string>
+    <string name="tax_certificate">Tax Certificate :</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="not_uploaded">Not Uploaded</string>
+<!--    <string name="country_code">256</string>-->
+
+    /// Enter Owner's Information
+    /// Personal Details
+    <string name="enter_owners_info">Enter Owner\'s Information</string>
+    <string name="personal_details">Personal\nDetails</string>
+    <string name="contact_details">Contact\nDetails</string>
+    <string name="guarantor_details">Guarantor\nDetails</string>
+    <string name="id_documents">ID\nDocuments</string>
+    <string name="select">Select</string>
+    <string name="gender">Gender</string>
+    <string-array name="gender">
+        <item>@string/male</item>
+        <item>@string/female</item>
+    </string-array>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="date_of_birth_hint">dd/mm/year</string>
+    <string name="education_level">Education Level</string>
+    <string-array name="education_level">
+        <item>Primary</item>
+        <item>Secondary</item>
+        <item>Tertiary Institution</item>
+        <item>Diploma</item>
+        <item>Degree</item>
+        <item>Masters or PhD</item>
+    </string-array>
+    <string name="marital_status">Marital Status</string>
+    <string-array name="marital_status">
+        <item>Single</item>
+        <item>Married</item>
+        <item>Divorced</item>
+        <item>Widowed</item>
+    </string-array>
+    <string name="years_in_business">Years In Business</string>
+    <string name="years">Years</string>
+    <string name="national_id">National ID</string>
+    <string name="enter_nin">Enter your NIN</string>
+    <string name="select_error">Please select %s!</string>
+    <string name="cannot_be_empty_error">%s cannot be empty!</string>
+    <string name="no_of_dependants">Number Of Dependants</string>
+
+    /// Contact Details
+    <string name="district">District</string>
+    <string name="district_hint">Type the district where you reside </string>
+    <string name="village">Village</string>
+    <string name="residential_type">Residential Type</string>
+    <string-array name="residential_types">
+        <item>Tenant</item>
+        <item>Owner</item>
+    </string-array>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="mobile_number_hint">Enter your direct contact number</string>
+    <string name="land_lord_name">Land Lord\'s Name</string>
+    <string name="land_lord_name_hint">Enter your landlord\'s full name</string>
+    <string name="land_lord_phone_number">Land Lord\'s Phone Number</string>
+
+    /// Referee Details
+    <string name="first_guarantor">First Guarantor</string>
+    <string name="second_guarantor">Second Guarantor</string>
+    <string name="enter_first_last_name">Enter first and last name</string>
+    <string name="relationship">Relationship</string>
+    <string-array name="relationship">
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Sister</item>
+        <item>Brother</item>
+        <item>Wife</item>
+        <item>Friend</item>
+        <item>Husband</item>
+    </string-array>
+    <string name="residential_address">Residential Address</string>
+    <string name="residential_address_hint">Enter Area of residency Ex. District and Village </string>
+
+    /// Id Documents
+    <string name="upload_id_documents">Upload ID Documents</string>
+    <string name="national_id_front_side">National ID Front Side</string>
+    <string name="national_id_back_side">National ID Back Side</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="selfie_in_your_business">Selfie in your Business</string>
+    <string name="upload_file">Upload File</string>
+    <string name="upload_file_subtitle">Click to upload file or take photo with your camera app</string>
+    <string name="selfie_in_your_business_subtitle">Take a selfie of your self while in your business place or shop</string>
+    <string name="photos_error">Please add photos of your %s!</string>
+
+    /// Business Details
+    <string name="create_business_profile">Create Business Profile</string>
+    <string name="business_details">Business\nDetails</string>
+    <string name="verification_documents">Verification\nDocuments</string>
+    <string name="business_name">Business Name</string>
+    <string name="business_type">Business Type</string>
+    <string name="private_held">Private held</string>
+    <string name="date_registered">Date Registered</string>
+    <string name="registration_no">Registration No.</string>
+    <string name="industry">Industry</string>
+    <string name="location_text">Location</string>
+    <string name="location_hint">Ex. Wakiso</string>
+    <string name="contact_person">Contact Person</string>
+    <string name="contact_person_hint">Ex. Kato Charles</string>
+    <string name="phone_number_hint_text">Ex. 0772411411</string>
+    <string name="number_of_employees">Number Of Employees</string>
+    <string name="number_of_employees_hint">Ex. 10</string>
+    <string name="avg_monthly_revenue">Avg. Monthly Revenue</string>
+    <string name="avg_monthly_revenue_hint">00.00</string>
+    <string name="ugx">UGX</string>
+    <string-array name="industry">
+        <item>Electronics</item>
+        <item>Grocery Store</item>
+        <item>Furniture</item>
+        <item>Hardware and Construction</item>
+        <item>Home Appliances</item>
+        <item>Restaurant</item>
+        <item>Mobile Phones and Computers</item>
+        <item>Wholesale Shop</item>
+        <item>Supermarket</item>
+        <item>Agricultural Inputs shop</item>
+        <item>Stationery and Printery </item>
+        <item>Agency Business</item>
+    </string-array>
+    <string-array name="business_type">
+        <item>Sole Proprietorship</item>
+        <item>Partnership</item>
+        <item>Private Limited Company</item>
+        <item>Joint Venture</item>
+        <item>Others</item>
+    </string-array>
+
+    /// Verification Documents
+    <string name="office_shop_photo">Office / Shop Photo</string>
+    <string name="office_shop_video">Office / Shop Video</string>
+    <string name="selfie_in_shop_office">Selfie in Shop / Office</string>
+    <string name="neighbourhood_photo">Neighbourhood Photo</string>
+    <string name="utility_bill">Utility Bill</string>
+    <string name="office_shop_photo_subtitle">Take a photo of your work place or shop</string>
+    <string name="office_shop_video_subtitle">Record a video clip of your work place. Must be less than 2 min</string>
+    <string name="selfie_in_shop_office_subtitle">Take a selfie of your self while in your business place or shop</string>
+    <string name="neighbourhood_photo_subtitle">Take a photo showing the area where your business is located</string>
+    <string name="utility_bill_subtitle">Take a photo of any of your utility bills Ex. Yaka, water bill etc</string>
+
+
+    /// Upload Business Documents
+    <string name="upload_business_documents">Upload Business Documents</string>
+    <string name="upload_business_documents_subtitle">Upload All your Business Documents as required below</string>
+    <string name="trade_license_text">Trade License</string>
+    <string name="registration_certificate">Registration Certificate</string>
+    <string name="tax_reg_certificate">Tax Reg. Certificate</string>
+    <string name="tax_clearance_certificate">Tax Clearance Certificate</string>
+    <string name="bank_statement">Bank Statement</string>
+    <string name="audited_financials">Audited Financials</string>
+    <string name="business_plan">Business Plan</string>
+    <string name="receipt_book">Receipt Book</string>
+    <string name="credit_reference_report">Credit Reference Report</string>
+    <string name="proof_of_assets">Proof Of Assets</string>
+    <string name="tax_report">Tax Report</string>
+    <string name="expenditure_report">Expenditure Report</string>
+
+    <string name="daily_payments">Daily Payments</string>
+
+
+</resources>

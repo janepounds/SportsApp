@@ -5,7 +5,7 @@
 
     <data>
 
-        <import type="com.cabral.emaishapay.data.models.screen.ScreenItem" />
+        <import type="com.example.flashsports.data.models.screen.ScreenItem" />
 
         <variable
             name="screenItem"

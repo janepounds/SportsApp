@@ -32,7 +32,6 @@ import com.example.flashsports.ui.viewModels.LoanViewModel
 import com.example.flashsports.ui.viewModels.LoginViewModel
 import com.example.flashsports.utils.*
 import com.example.flashsports.utils.calculation.CalculationUtils
-import com.freshchat.consumer.sdk.Freshchat
 import com.pixplicity.easyprefs.library.Prefs
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
@@ -244,17 +243,6 @@ class EnterPinFragment : BaseFragment<FragmentEnterPinBinding>() {
                                         )
 
                                         userPreferences.saveIsLoggedIn(true)
-                                        var freshChatUser = Freshchat.getInstance(context!!).user
-                                        freshChatUser.firstName = getFirstName(it.data.name!!)
-                                        freshChatUser.lastName = getLastName(it.data.name!!)
-                                        freshChatUser.email = it.data.email
-                                        freshChatUser.setPhone(
-                                            "+256",
-                                            it.data.phoneNumber.substring(3)
-                                        )
-
-                                        // Call setUser so that the user information is synced with Freshchat's servers
-                                        Freshchat.getInstance(context!!).user = freshChatUser
                                     }
 
                                 }

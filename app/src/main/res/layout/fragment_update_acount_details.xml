@@ -5,7 +5,7 @@
 
     <data>
 
-        <import type="com.cabral.emaishapay.data.models.User" />
+        <import type="com.example.flashsports.data.models.User" />
         <import type="android.view.View" />
         <variable
             name="user"

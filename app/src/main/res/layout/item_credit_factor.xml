@@ -5,7 +5,7 @@
 
     <data>
 
-        <import type="com.cabral.emaishapay.data.models.screen.CreditFactorItem" />
+        <import type="com.example.flashsports.data.models.screen.CreditFactorItem" />
 
         <variable
             name="creditFactorItem"

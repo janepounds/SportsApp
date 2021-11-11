@@ -4,7 +4,7 @@
 
     <data>
 
-        <import type="com.cabral.emaishapay.ui.fragments.EnterPinFragment.KeyPadListener" />
+        <import type="com.example.flashsports.ui.fragments.EnterPinFragment.KeyPadListener" />
 
         <variable
             name="keyPadListener"

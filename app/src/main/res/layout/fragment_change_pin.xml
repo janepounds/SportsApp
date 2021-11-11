@@ -7,7 +7,7 @@
     <data>
 
         <import type="android.view.View" />
-        <import type="com.cabral.emaishapay.data.models.User" />
+        <import type="com.example.flashsports.data.models.User" />
 
         <variable
             name="isForgotPin"

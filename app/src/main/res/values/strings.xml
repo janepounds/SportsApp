@@ -1,28 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY appname "eMaisha Pay"><!ENTITY currency "₹"><!ENTITY asterisk "＊">]>
 <resources>
-    <string name="app_name">Flash Sports</string>
-    <string name="title_coaches">Coaches</string>
+    <string name="app_name">&appname;</string>
+    <string name="app_name_first_part">eMaisha</string>
+    <string name="app_name_second_part">Pay</string>
+
+    /// Titles
     <string name="title_home">Home</string>
+    <string name="title_my_business">My Business</string>
+    <string name="title_credit_score">Credit Score</string>
     <string name="title_account">Account</string>
-    <string name="title_sports_categories">Sports Categories</string>
-    <string name="cancel">Cancel</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    /// Splash
-    <string name="app_slogan">Grow your favourite sport through a wide range of professional coaches </string>
 
+    /// Common
+    <string name="share_intent_msg">&appname; - Install Now</string>
+    <string name="continue_text">Continue</string>
+    <string name="submit">Submit</string>
+    <string name="back">Back</string>
+    <string name="save">Save</string>
+    <string name="save_and_next">Save &amp; Next</string>
+    <string name="hint_balance_text">UGX 6,000,000</string>
+
+    <string name="agreement_title">Agreement</string>
+    <string name="service_terms"> Terms And Conditions </string>
+
+
+    /// Alert Dialog
+    <string name="alert">Alert</string>
     <string name="exit_app">Exit the app?</string>
     <string name="exit_app_body">Are you sure you want to exit the app?</string>
+    <string name="cancel">Cancel</string>
     <string name="exit">Exit</string>
     <string name="ok">OK</string>
     <string name="okay">OKAY</string>
     <string name="confirm">Confirm</string>
 
+    //file provider
+    <string name="freshchat_file_provider_authority">com.cabral.emaishapay.provider</string>
+
+    /// Splash
+    <string name="app_slogan">Grow your Business with quick and Affordable Loans</string>
+
 
     /// Intro
-    <string name="intro_screen_1">Enjoy unlimited sessions with your favourite coaches</string>
-    <string name="intro_screen_2">Watch free training tutorials and accelerate your skills</string>
-    <string name="intro_screen_3">Explorer through a wide variety of sports and rate your favourite coaches </string>
+    <string name="intro_screen_1">Easy and Flexible Business Loans to match your Business Needs</string>
+    <string name="intro_screen_2">Money on Demand to Cover unexpected cash Flow gaps and keep your Business Moving</string>
+    <string name="intro_screen_3">Fast decision and Funding Possible in 24 Hours no Asset Security required Upfront</string>
     <string name="next">Next</string>
     <string name="skip">Skip</string>
+
+    /// Welcome
+    <string name="low_interest_loans">Low Interest Loans</string>
+    <string name="at_click_button">At the click of a Button</string>
+    <string name="sign_in">Sign in</string>
+    <string name="create_new_account">Create a new account</string>
+
+
+    /// Login
+    <string name="login">Login</string>
+    <string name="enter_phone_num">Please enter\nMobile Number</string>
+    <string name="enter_phone_num_subtitle">Login with your registered Mobile Number to access your account</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="phone_cannot_be_empty">Phone Number cannot be empty!</string>
+    <string name="invalid_phone_number">Invalid Phone Number!</string>
+
+
+    /// Sign Up
+    <string name="sign_up">Sign-up</string>
+    <string name="full_name">Full Name</string>
+    <string name="full_name_hint">As written on your National Identification</string>
+    <string name="full_name_cannot_be_empty">Full Name cannot be empty!</string>
+    <string name="email_address">Email Address</string>
+    <string name="email_address_hint">Ex. yourname@mail.com</string>
+    <string name="email_address_cannot_be_empty">Email Address cannot be empty!</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="country_code">+256</string>
+    <string name="phone_code">256</string>
+    <string name="phone_number_hint">700100100</string>
+    <string name="already_have_account">Already Have An Account?</string>
+    <string name="tac_not_accepted">Terms and Conditions is not accepted! Accept it.</string>
+    <string name="via_sms">Via SMS</string>
+    <string name="via_email">Via Email</string>
+
+
+    /// Verify Pin
+    <string name="otp_verify">OTP\nVerify!</string>
+    <string name="season_end">This season will end in %d seconds.</string>
+    <string name="didnt_receive_code">Didn\'t receive code?</string>
+    <string name="resend_code"><u>Resend code</u></string>
+    <string name="otp_verify_reset_code"><u>Enter 4-Digit\n Recovery Code</u></string>
+
+    //payment status
+    <string name="payment_session">If the USSD prompt doesnot come in %d seconds, Please retry</string>
+
+
+    /// Create Pin
+    <string name="create_pin">Create PIN</string>
+    <string name="create_pin_subtitle">Enter a 4 digit PIN to get started</string>
+    <string name="forgot_pin_subtitle">Select which contact details we should use to reset your password</string>
+    <string name="pin">PIN</string>
+    <string name="pin_cannot_be_empty">Pin cannot be empty!</string>
+    <string name="confirm_pin">Confirm PIN</string>
+    <string name="confirm_pin_cannot_be_empty">Confirm Pin cannot be empty!</string>
+    <string name="confirm_pin_not_matches">Pin doesn\'t match Confirm Pin!</string>
+    <string name="pin_hint">&asterisk;&asterisk;&asterisk;&asterisk;</string>
+    <string name="both_pins_must_match">Both PINs must match</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_pin">Forgot Password</string>
+    <string name="create_new_pin">Create new PIN</string>
+
+
+    /// Enter Pin
+    <string name="enter_pin">Enter Pin</string>
+    <string name="enter_pin_hint">Enter your 4 digit PIN to confirm</string>
+    <string name="invalid_pin">Invalid Pin! Pin must be equal to 4 digits.</string>
+    <string name="forget_pin">Forgot Pin?</string>
+    <string name="click_here">Click here</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="one_thousand">1000</string>
+
+
+    /// My Account
+    <string name="my_account">My Account</string>
+    <string name="customer_support">Customer Support</string>
+    <string name="do_you_need_help">Do you Need Help?</string>
+    <string name="email">Email</string>
+    <string name="live_chat">Live Chat</string>
+    <string name="toll_free">Toll Free</string>
+
+    <string name="settings_security">Settings &amp; Security</string>
+    <string name="change_your_pin">Change your Pin</string>
+    <string name="faq">FAQ\'s</string>
+    <string name="frequently_asked_questions">Frequently asked questions</string>
+
+    <string name="loan_policy">Loan Policy</string>
+    <string name="lending_disclosure">Lending Disclosure</string>
+    <string name="loan_agreement">Loan Agreement</string>
+    <string name="recovery_policy">Recovery Policy</string>
+    <string name="what_you_need_to_know">What you need to know</string>
+    <string name="what_you_need_to_about_loan">What you need to know before you apply for a loan</string>
+    <string name="loren_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley. scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. into electronic typesetting, remaining essentially unchanged.</string>
+
+    <string name="rate_app">Rate App</string>
+    <string name="share_app">Share App</string>
+    <string name="app_version">App Version: %s</string>
+    <string name="log_out">Logout</string>
+    <string name="currency_code">UGX</string>
+    <string name="session_expired">Session Expired</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="placeholder_phone">… … 95 67</string>
+    <string name="placeholder_email">… drew@gmail.com</string>
+    <string name="personal_details_value">personal details</string>
+    <string name="edit">Edit</string>
+    <string name="description_placeholder">Description will be here</string>
+    <string name="change_pin">Change Pin</string>
+    <string name="new_pin">New PIN</string>
+    <string name="old_pin">Old PIN</string>
+    <string name="new_pin_and_confirm_new_pin_must_match">New PIN and Confirm New PIN must match</string>
+    <string name="confirm_new_pin">Confirm New PIN</string>
+    <string name="send_email">Send Email</string>
+    <string name="description">Description</string>
+    <string name="none">None</string>
+    <string name="current_loan">Current Loan :</string>
+    <string name="past_loans">Past Loans</string>
+    <string name="no_data_to_show">NO DATA TO SHOW</string>
+    <string name="faq_1">What is eMaisha Pay?</string>
+    <string name="faq_1_answer">It’s a mobile platform that enables micro and small businesses access to quick, affordable, and non-collateral working capital for business growth
+    </string>
+    <string name="faq_2">Why should I choose a business loan from eMaisha Pay?</string>
+    <string name="faq_2_answer">eMaisha Pay is designed for the day–to–day operational needs of small businesses. The benefits include.\n&#8226; Simple, and online application process<br />
+        \n&#8226; Completely collateral free loan <br />
+        \n&#8226; Funds disbursed within 24 hours<br />
+        \n&#8226; Low interest rate <br />
+        \n&#8226; Flexible payment schedule <br />
+        \n&#8226; No paperwork<br /></string>
+    <string name="faq_3">Who can apply for eMaisha Pay’s Business Loans?</string>
+    <string name="faq_3_answer">To be eligible for our short-term non-collateral business loan, all you need is;<br />
+        \n&#8226; The business history of at least 1 year<br />
+        \n&#8226;Trade License <br />
+        \n&#8226; Registration Certificate  <br />
+        \n&#8226; Owner’s National ID<br /></string>
+    <string name="faq_4">How will the loan eligibility of my business be calculated?</string>
+    <string name="faq_4_answer">Our loan application uses intelligent algorithms to evaluate the data provided and determine loan eligibility instantly. </string>
+    <string name="faq_5">What is the payment schedule and method? </string>
+    <string name="faq_5_answer">You select your own payment schedule, whether weekly or monthly, and the duration to clear the loan based on your individual business situation. Loan payment is made using mobile money. </string>
+    <string name="faq_6">What if I want to pay off the loan amount early?</string>
+    <string name="faq_6_answer">If you wish to repay the amount before the loan tenure chosen by you, you are welcome to do so. No repayment penalty is charged. Our aim is to help your business succeed. </string>
+    <string name="submit_your_questions">Submit your Questions</string>
+    <string name="permission_required">SMS Permission Required</string>
+    <string name="agreement_read_label">"I have received and agreed to the "</string>
+    <string name="loan_agreement_amount">BORROWER a loan of <b>UGX %s</b></string>
+    <string name="loan_agreement_duration">" period of <b>%s</b> ."</string>
+    <string name="loan_agreement_reason"> <b>Working Capital</b> </string>
+    <string name="mtn_mm_address">MTNMobMoney</string>
+    <string name="airtelmoney_address">AirtelMoney</string>
+
+    <string name="item_key_0">New MoMo balance: UGX</string>
+    <string name="item_key_1">New balance is:UGX</string>
+    <string name="item_key_2_">New balance is UGX</string>
+    <string name="item_key_3">New balance: UGX</string>
+    <string name="item_key_4">Balance is UGX</string>
+    <string name="item_key_5">New balance:</string>
+    <string name="item_key_6">New balance</string>
+    <string name="item_key_7">Balance UGX</string>
+    <string name="item_key_8">Bal UGX</string>
+    <string name="max_loan_duration">Maximum repayment period is 8 weeks</string>
+
+    <string-array name="mm_keys">
+        <item>@string/item_key_0</item>
+        <item>@string/item_key_1</item>
+        <item>@string/item_key_2_</item>
+        <item>@string/item_key_3</item>
+        <item>@string/item_key_4</item>
+        <item>@string/item_key_5</item>
+        <item>@string/item_key_6</item>
+        <item>@string/item_key_7</item>
+        <item>@string/item_key_8</item>
+    </string-array>
+
+
 </resources>

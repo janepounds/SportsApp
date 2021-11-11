@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    /// Home
+    <string name="wallet_balance">Wallet Balance</string>
+    <string name="wallet_balance_value">UGX %s</string>
+    <string name="next_payment_date">Next Payment Date %s</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="dear_user">Dear %s</string>
+    <string name="loan_duration"> %s</string>
+
+    <string name="withdraw_funds">Withdraw Funds</string>
+    <string name="my_loans">My Loans</string>
+    <string name="payment_due">Payment Due</string>
+    <string name="need_a_loan">Need a Loan?</string>
+    <string name="get_now">Get Now</string>
+    <string name="authorize_payment">Authorize Payment</string>
+    <string name="authorize_application">Authorize Application</string>
+
+    /// Make Payments
+    <string name="make_payments">Make Payments</string>
+    <string name="amount_capital">AMOUNT</string>
+    <string name="balance_amt">Balance: UGX %s</string>
+    <string name="enter_mobile_money_number">Enter your mobile money number</string>
+    <string name="pay">Pay</string>
+    <string name="make_payments_subtitle">You will receive a prompt on your registered mobile number to authorise payment by entering your <b>PIN</b></string>
+    <string name="past_repayments">Past Repayments</string>
+    <string name="txn_id">Txn ID: %s</string>
+    <string name="view_more">View more …</string>
+
+
+    /// My Loans
+    <string name="business_loan">Business Loan: %s</string>
+    <string name="amt_ugx">Amount: UGX: %s</string>
+    <string name="loans">Loans</string>
+    <string name="new_loan">New Loan</string>
+    <string name="loan_history">Loan History</string>
+
+    /// New Loan
+    <string name="calculator">Calculator</string>
+    <string name="duration">Duration</string>
+    <string name="duration_type">Duration Type</string>
+    <string name="days">Days</string>
+    <string name="weeks">Weeks</string>
+    <string name="months">Months</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string-array name="duration">
+        <item>WKS</item>
+<!--        <item>MTHS</item>-->
+    </string-array>
+    <string name="duration_with_type_value">%d %s</string>
+    <string name="ugx_with_duration">UGX %s / %s</string>
+    <string name="enter">Enter</string>
+    <string name="due_amount">Due Amount</string>
+    <string name="interest_rate">Interest Rate</string>
+    <string name="interest_rate_value">%.1f\%%</string>
+    <string name="processing_fee">Processing Fee</string>
+    <string name="payment">Payment</string>
+    <string name="apply">Apply</string>
+
+
+    /// Loan Confirmation
+    <string name="total_loan">Total Loan</string>
+    <string name="repayment_time_value">Repayment Time : %d %s</string>
+    <string name="starting_date">Starting on %s</string>
+
+    /// Loan Details
+    <string name="loan_details">Loan Details</string>
+    <string name="loan_id">Loan ID : %s</string>
+    <string name="remaining_to_be_paid">Remaining to be paid</string>
+    <string name="paid_to_date">Paid to date</string>
+    <string name="weekly_payments">Weekly Payments</string>
+    <string name="loan_amount">Loan Amount</string>
+    <string name="loan_period">Loan Period</string>
+    <string name="time_left">Time Left</string>
+    <string name="partial_payment">Partial Payment</string>
+    <string name="full_payment">Full Payment</string>
+
+    /// Authorize Payments
+    <string name="recipient">Recipient</string>
+    <string name="authorize_payments">Authorize Payments</string>
+
+
+    /// Withdraw Funds
+    <string name="enter_receiver_mobile_number">Enter receiver’s mobile number</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="past_withdraw">Past Withdraw</string>
+    <string name="withdraw_subtitle">Withdraw will only be successful by entering <b>PIN</b>, Click withdraw to continue </string>
+
+
+    /// Status Dialog
+    <string name="loan_review_status_text">Your loan application has been received pending review, you will receive a loan decision within 24 working hours</string>
+    <string name="payment_successfully_text">You have successfully made a payment of UGX %s towards Loan %s. Your current loan balance is UGX %s</string>
+    <string name="thank_you">Thank You</string>
+    <string name="payment_status_text">Please wait as we process your payment</string>
+    <string name="business_status_text">Your documents are still under review.Please try again later</string>
+    <string name="loan_pending_text">You already have a pending loan application awaiting approval</string>
+    <string name="loan_ongoing_text">You already have an ongoing loan </string>
+
+
+    /// Withdraw Funds Dialog
+    <string name="recipient_number">Recipient Number</string>
+    <string name="amount">Amount</string>
+    <string name="tranx_fee">Tranx Free</string>
+
+
+    /// Transfer Success
+    <string name="transferred_successfully">Transferred\nSuccessfully</string>
+    <string name="transferred_successfully_detailed_text">Dear %s your amount has been transferred to your requested recipient. Thank you for using eMaisha Pay Loans</string>
+    <string name="view_details">View Details</string>
+    <string name="password_reset_successfully">Password Reset\nSuccessful</string>
+    <string name="password_reset_successful">You have successfully rest your password Please create a new password to continue</string>
+
+
+
+    /// Credit Score
+    <string name="good_score">Good Score</string>
+    <string name="your_credit_score">Your Credit Score</string>
+    <string name="credit_factor">Credit Factor</string>
+    <string name="business_assets">Business Assets</string>
+    <string name="credit_history">Credit History</string>
+    <string name="payment_history">Payment History</string>
+    <string name="learn_more">Learn More …</string>
+
+    ///FAQ
+    <string name="faq_title">Frequently Asked Questions:</string>
+</resources>

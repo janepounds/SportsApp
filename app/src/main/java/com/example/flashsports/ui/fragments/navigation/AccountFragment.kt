@@ -30,14 +30,11 @@ import com.example.flashsports.data.models.User
 import com.example.flashsports.data.models.screen.AccountExpandableLayout
 import com.example.flashsports.databinding.DialogLoanStatusBinding
 import com.example.flashsports.databinding.DialogWebviewFullscreenBinding
-import com.example.flashsports.databinding.LoanPolicyDialogBinding
-import com.example.flashsports.singleton.MyApplication
 import com.example.flashsports.ui.activities.MainActivity
 import com.example.flashsports.ui.base.BaseFragment
-import com.example.flashsports.ui.viewModels.FilesViewModel
 import com.example.flashsports.ui.viewModels.LoanViewModel
 import com.example.flashsports.utils.*
-import com.freshchat.consumer.sdk.Freshchat
+
 import com.pixplicity.easyprefs.library.Prefs
 
 import dagger.hilt.android.AndroidEntryPoint
@@ -210,7 +207,6 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>() {
         lifecycleScope.launch {
             userPreferences.saveIsLoggedIn(false)
         }
-        Freshchat.resetUser(context)
         val intent = Intent(requireActivity(), MainActivity::class.java)
         startActivity(intent)
         requireActivity().finish()

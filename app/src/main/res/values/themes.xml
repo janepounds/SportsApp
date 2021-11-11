@@ -72,6 +72,7 @@
     <style name="EditTextOtp">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
+        <item name="android:drawableTint">#EFEFEF</item>
         <item name="android:gravity">center</item>
         <item name="android:maxLength">1</item>
         <item name="android:inputType">number</item>

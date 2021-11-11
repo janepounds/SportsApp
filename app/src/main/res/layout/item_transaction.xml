@@ -5,11 +5,11 @@
 
     <data>
 
-        <import type="com.cabral.emaishapay.data.models.Transaction" />
+        <import type="com.example.flashsports.data.models.Transaction" />
 
         <variable
             name="transaction"
-            type="com.cabral.emaishapay.data.models.Transaction" />
+            type="com.example.flashsports.data.models.Transaction" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

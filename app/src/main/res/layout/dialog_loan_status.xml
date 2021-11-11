@@ -5,7 +5,7 @@
 
     <data>
 
-        <import type="com.cabral.emaishapay.data.models.User" />
+        <import type="com.example.flashsports.data.models.User" />
 
         <variable
             name="user"
@@ -27,10 +27,10 @@
             android:scaleType="fitCenter"
             android:src="@drawable/ic_check"
             android:visibility="gone"
-            android:tint="@color/primaryColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/primaryColor" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/user_greeting"

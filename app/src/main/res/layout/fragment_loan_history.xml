@@ -5,7 +5,7 @@
 
     <data>
 
-        <import type="com.cabral.emaishapay.ui.adapters.LoanAdapter" />
+        <import type="com.example.flashsports.ui.adapters.LoanAdapter" />
 
         <variable
             name="adapter"
