@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="progress"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/layout_business_info"
+            layout="@layout/layout_info_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:title="@{title}" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".095" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".905" />
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/grey_3"
+            app:layout_constraintBottom_toBottomOf="@+id/progress_1"
+            app:layout_constraintEnd_toEndOf="@+id/progress_2"
+            app:layout_constraintStart_toStartOf="@+id/progress_1"
+            app:layout_constraintTop_toTopOf="@+id/progress_1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/progress_1"
+            style="@style/ProgressCircleTextView"
+            android:layout_marginTop="24dp"
+            android:text="@string/one"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_1"
+            app:layout_constraintStart_toStartOf="@+id/guideline_1"
+            app:layout_constraintTop_toBottomOf="@+id/layout_business_info"
+            app:progressBackgroundTint="@{progress == 1}"
+            tools:backgroundTint="@color/primaryColor" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/progress_2"
+            style="@style/ProgressCircleTextView"
+            android:text="@string/two"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_2"
+            app:layout_constraintStart_toStartOf="@+id/guideline_2"
+            app:layout_constraintTop_toTopOf="@+id/progress_1"
+            app:progressBackgroundTint="@{progress == 2}"
+            tools:backgroundTint="@color/grey_3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/progress_1_text"
+            style="@style/ProgressTextView"
+            android:layout_marginBottom="8dp"
+            android:text="@string/business_details"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/progress_1"
+            app:layout_constraintTop_toBottomOf="@+id/progress_1"
+            app:progressTextColor="@{progress == 1}"
+            tools:textColor="@color/primaryColor" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/progress_2_text"
+            style="@style/ProgressTextView"
+            android:layout_marginBottom="8dp"
+            android:text="@string/verification_documents"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/progress_2"
+            app:layout_constraintTop_toBottomOf="@+id/progress_2"
+            app:progressTextColor="@{progress == 2}"
+            tools:textColor="@color/grey_3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

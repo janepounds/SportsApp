@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.cabral.emaishapay.data.models.User" />
+
+        <variable
+            name="user"
+            type="User" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tv_text_1,tv_text_2,tv_text_3,tv_text_4" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_text_1"
+            style="@style/ConfirmationDialogTextView"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/recipient"
+            app:layout_constraintBottom_toBottomOf="@+id/value_text_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/value_text_1"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_text_2"
+            style="@style/ConfirmationDialogTextView"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/recipient_number"
+            app:layout_constraintBottom_toBottomOf="@+id/value_text_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text_1"
+            app:layout_constraintTop_toTopOf="@+id/value_text_2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_text_3"
+            style="@style/ConfirmationDialogTextView"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/amount"
+            app:layout_constraintBottom_toBottomOf="@+id/value_text_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text_2"
+            app:layout_constraintTop_toTopOf="@+id/value_text_3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_text_4"
+            style="@style/ConfirmationDialogTextView"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/tranx_fee"
+            app:layout_constraintBottom_toBottomOf="@+id/value_text_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text_3"
+            app:layout_constraintTop_toTopOf="@+id/value_text_4" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/value_text_1"
+            style="@style/ConfirmationDialogTextView"
+            android:layout_width="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/full_names"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/value_text_2"
+            style="@style/ConfirmationDialogTextView"
+            android:layout_width="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/barrier"
+            app:layout_constraintTop_toBottomOf="@+id/value_text_1"
+            tools:text="@tools:sample/us_zipcodes" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/value_text_3"
+            style="@style/ConfirmationDialogTextView"
+            android:layout_width="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/barrier"
+            app:layout_constraintTop_toBottomOf="@+id/value_text_2"
+            tools:text="@string/hint_balance_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/value_text_4"
+            style="@style/ConfirmationDialogTextView"
+            android:layout_width="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/barrier"
+            app:layout_constraintTop_toBottomOf="@+id/value_text_3"
+            tools:text="@string/hint_balance_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/confirm_btn"
+            style="@style/MaterialFilledButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:paddingStart="48dp"
+            android:paddingEnd="48dp"
+            android:text="@string/confirm"
+            android:textColor="@color/primaryColor"
+            android:textStyle="bold"
+            app:backgroundTint="#DBF2FF"
+            app:cornerRadius="90dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/value_text_4"
+            app:strokeColor="@color/primaryColor"
+            app:strokeWidth="2dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fillViewport="true"
+      tools:context=".ui.fragments.businessInfo.ownerProfile.EnterContactDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <androidx.constraintlayout.widget.Guideline
+          android:id="@+id/guideline_1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintGuide_percent=".5" />
+
+      <include
+          android:id="@+id/progress_layout"
+          layout="@layout/layout_owner_info_progress"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          bind:progress="@{2}"
+          bind:title="@{@string/enter_owners_info}" />
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_district"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/edit_text_title_margin_start_end"
+          android:layout_marginTop="@dimen/progress_layout_margin_top"
+          android:layout_marginEnd="@dimen/edit_text_title_margin_start_end"
+          android:text="@string/district"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/progress_layout" />
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/et_district"
+          style="@style/OutlinedEditTextStyle"
+          android:layout_width="0dp"
+          android:layout_height="45dp"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:hintEnabled="false"
+          app:layout_constraintEnd_toEndOf="@+id/tv_district"
+          app:layout_constraintStart_toStartOf="@+id/tv_district"
+          app:layout_constraintTop_toBottomOf="@+id/tv_district">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/autoComplete_district"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/edit_text_margin_start_end"
+            android:paddingEnd="@dimen/edit_text_margin_start_end"
+            android:hint="@string/district_hint"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_text_size"
+            app:spinner_item_array="@array/residential_types" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_village"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_title_margin_top"
+          android:layout_marginEnd="@dimen/edit_text_margin_start_end"
+          android:text="@string/village"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="@id/guideline_1"
+          app:layout_constraintStart_toStartOf="@+id/tv_district"
+          app:layout_constraintTop_toBottomOf="@+id/et_district" />
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/et_village"
+          style="@style/OutlinedEditTextStyle"
+          android:layout_width="0dp"
+          android:layout_height="45dp"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:hintEnabled="false"
+          app:layout_constraintEnd_toEndOf="@+id/tv_village"
+          app:layout_constraintStart_toStartOf="@+id/tv_district"
+          app:layout_constraintTop_toBottomOf="@+id/tv_village">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/edit_text_margin_start_end"
+            android:paddingEnd="@dimen/edit_text_margin_start_end"
+            android:hint="@string/village"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_text_size" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_residential_type"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/edit_text_margin_start_end"
+          android:text="@string/residential_type"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="@+id/tv_district"
+          app:layout_constraintStart_toStartOf="@+id/guideline_1"
+          app:layout_constraintTop_toTopOf="@+id/tv_village" />
+
+      <com.skydoves.powerspinner.PowerSpinnerView
+          android:id="@+id/spinner_residential_type"
+          style="@style/PowerSpinner"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:layout_constraintEnd_toEndOf="@+id/tv_district"
+          app:layout_constraintStart_toStartOf="@+id/tv_residential_type"
+          app:layout_constraintTop_toBottomOf="@+id/tv_residential_type"
+          app:spinner_item_array="@array/residential_types" />
+
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_mobile_number"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_title_margin_top"
+          android:text="@string/mobile_number"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+
+          app:layout_constraintEnd_toEndOf="@+id/tv_district"
+          app:layout_constraintStart_toStartOf="@+id/tv_district"
+          app:layout_constraintTop_toBottomOf="@+id/spinner_residential_type" />
+
+      <include
+          android:id="@+id/et_mobile_number"
+          layout="@layout/layout_phone_number_edit_text"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:layout_constraintEnd_toEndOf="@+id/tv_district"
+          app:layout_constraintStart_toStartOf="@+id/tv_district"
+          app:layout_constraintTop_toBottomOf="@+id/tv_mobile_number"
+          bind:phoneNumberHint="@{@string/mobile_number_hint}" />
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_landlord_name"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_title_margin_top"
+          android:text="@string/land_lord_name"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="@+id/tv_district"
+          app:layout_constraintStart_toStartOf="@+id/tv_district"
+          app:layout_constraintTop_toBottomOf="@+id/et_mobile_number" />
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/et_landlord_name"
+          style="@style/OutlinedEditTextStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:hintEnabled="false"
+          app:layout_constraintEnd_toEndOf="@+id/tv_district"
+          app:layout_constraintStart_toStartOf="@+id/tv_district"
+          app:layout_constraintTop_toBottomOf="@+id/tv_landlord_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/land_lord_name_hint"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_text_size" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_landlord_phone_number"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_title_margin_top"
+          android:text="@string/land_lord_phone_number"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="@+id/tv_district"
+          app:layout_constraintStart_toStartOf="@+id/tv_district"
+          app:layout_constraintTop_toBottomOf="@+id/et_landlord_name" />
+
+      <include
+          android:id="@+id/et_landlord_phone_number"
+          layout="@layout/layout_phone_number_edit_text"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:layout_constraintEnd_toEndOf="@+id/tv_district"
+          app:layout_constraintStart_toStartOf="@+id/tv_district"
+          app:layout_constraintTop_toBottomOf="@+id/tv_landlord_phone_number"
+          bind:phoneNumberHint="@{``}" />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/save_btn"
+          style="@style/MaterialFilledButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/edit_text_title_margin_start_end"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginBottom="32dp"
+          android:text="@string/save"
+          app:cornerRadius="90dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="@id/guideline_1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/et_landlord_phone_number" />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/save_and_next_btn"
+          style="@style/MaterialFilledButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="@dimen/edit_text_title_margin_start_end"
+          android:layout_marginBottom="32dp"
+          android:text="@string/save_and_next"
+          android:textColor="@color/primaryColor"
+          android:textStyle="bold"
+          app:backgroundTint="#DBF2FF"
+          app:cornerRadius="90dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="@id/guideline_1"
+          app:layout_constraintTop_toBottomOf="@+id/et_landlord_phone_number"
+          app:strokeColor="@color/primaryColor"
+          app:strokeWidth="2dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </ScrollView>
+
+</layout>

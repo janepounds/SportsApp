@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_introFragment"
+            app:destination="@id/introFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_enterPinFragment"
+            app:destination="@id/enterPinFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.IntroFragment"
+        android:label="fragment_intro"
+        tools:layout="@layout/fragment_intro" />
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.register.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_otpVerifyFragment"
+            app:destination="@id/otpVerifyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otpVerifyFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.register.signup.OtpVerifyFragment"
+        android:label="OtpVerifyFragment"
+        tools:layout="@layout/fragment_otp_verify">
+        <action
+            android:id="@+id/action_otpVerifyFragment_to_createPinFragment"
+            app:destination="@id/createPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_otpVerifyFragment_to_passwordResetSuccessFragment"
+            app:destination="@id/passwordResetSuccessFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createPinFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.register.signup.CreatePinFragment"
+        android:label="CreatePinFragment"
+        tools:layout="@layout/fragment_create_pin" />
+
+    <fragment
+        android:id="@+id/changePinFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.ChangePinFragment"
+        android:label="CreatePinFragment"
+        tools:layout="@layout/fragment_change_pin" />
+
+    <fragment
+        android:id="@+id/enterPinFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.EnterPinFragment"
+        android:label="EnterPinFragment"
+        tools:layout="@layout/fragment_enter_pin" >
+
+        <action
+            android:id="@+id/action_enterPinFragment_to_otpVerifyFragment"
+            app:destination="@id/otpVerifyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.navigation.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_withdrawFundsFragment"
+            app:destination="@id/withdrawFundsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_myLoansFragment"
+            app:destination="@id/myLoansFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_enterPinFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/enterPinFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myBusinessFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.navigation.MyBusinessFragment"
+        android:label="@string/title_my_business"
+        tools:layout="@layout/fragment_my_business">
+        <action
+            android:id="@+id/action_myBusinessFragment_to_enterPersonalDetailsFragment"
+            app:destination="@id/enterPersonalDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_myBusinessFragment_to_enterBusinessDetailsFragment"
+            app:destination="@id/enterBusinessDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_myBusinessFragment_to_uploadBusinessDocumentsFragment"
+            app:destination="@id/uploadBusinessDocumentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/creditScoreFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.navigation.CreditScoreFragment"
+        android:label="@string/title_credit_score"
+        tools:layout="@layout/fragment_credit_score" />
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.navigation.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_updateAccountDetailsFragment"
+            app:destination="@id/updateAccountDetailsFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_changePinFragment"
+            app:destination="@id/changePinFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_sendEmailFragment"
+            app:destination="@id/sendEmailFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_FAQsFragment"
+            app:destination="@id/FAQsFragment" />
+    </fragment>
+
+
+    <!--    Business Info-->
+    <fragment
+        android:id="@+id/enterPersonalDetailsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.ownerProfile.EnterPersonalDetailsFragment"
+        android:label="EnterPersonalDetailsFragment"
+        tools:layout="@layout/fragment_enter_personal_details">
+        <action
+            android:id="@+id/action_enterPersonalDetailsFragment_to_enterContactDetailsFragment"
+            app:destination="@id/enterContactDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enterContactDetailsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.ownerProfile.EnterContactDetailsFragment"
+        android:label="EnterContactDetailsFragment"
+        tools:layout="@layout/fragment_enter_contact_details">
+        <action
+            android:id="@+id/action_enterContactDetailsFragment_to_enterGuarantorDetailsFragment"
+            app:destination="@id/enterGuarantorDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enterGuarantorDetailsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.ownerProfile.EnterGuarantorDetailsFragment"
+        android:label="EnterGuarantorDetailsFragment"
+        tools:layout="@layout/fragment_enter_guarantor_details">
+        <action
+            android:id="@+id/action_enterGuarantorDetailsFragment_to_uploadIdDocumentsFragment"
+            app:destination="@id/uploadIdDocumentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/uploadIdDocumentsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.ownerProfile.UploadIdDocumentsFragment"
+        android:label="UploadIdDocumentsFragment"
+        tools:layout="@layout/fragment_upload_id_documents" />
+
+
+    <fragment
+        android:id="@+id/enterBusinessDetailsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.businessProfile.EnterBusinessDetailsFragment"
+        android:label="EnterBusinessDetailsFragment"
+        tools:layout="@layout/fragment_enter_business_details">
+        <action
+            android:id="@+id/action_enterBusinessDetailsFragment_to_verificationDocumentsFragment"
+            app:destination="@id/verificationDocumentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/verificationDocumentsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.businessProfile.VerificationDocumentsFragment"
+        android:label="VerificationDocumentsFragment"
+        tools:layout="@layout/fragment_verification_documents" />
+
+
+    <fragment
+        android:id="@+id/uploadBusinessDocumentsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.businessInfo.businessDocuments.UploadBusinessDocumentsFragment"
+        android:label="UploadBusinessDocumentsFragment"
+        tools:layout="@layout/fragment_upload_business_documents" />
+
+
+    <!--    Home-->
+    <fragment
+        android:id="@+id/myLoansFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.home.MyLoansFragment"
+        android:label="MyLoansFragment"
+        tools:layout="@layout/fragment_my_loans" />
+
+    <fragment
+        android:id="@+id/loanConfirmationFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.home.LoanConfirmationFragment"
+        android:label="LoanConfirmationFragment"
+        tools:layout="@layout/fragment_loan_confirmation" />
+
+    <fragment
+        android:id="@+id/withdrawFundsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.home.WithdrawFundsFragment"
+        android:label="WithdrawFundsFragment"
+        tools:layout="@layout/fragment_withdraw_funds" />
+
+    <fragment
+        android:id="@+id/makePaymentsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.home.MakePaymentsFragment"
+        android:label="MakePaymentsFragment"
+        tools:layout="@layout/fragment_make_payments" />
+
+    <fragment
+        android:id="@+id/loanDetailsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.home.LoanDetailsFragment"
+        android:label="LoanDetailsFragment"
+        tools:layout="@layout/fragment_loan_details">
+        <action
+            android:id="@+id/action_loanDetailsFragment_to_makePaymentsFragment"
+            app:destination="@id/makePaymentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/transferredSuccessfullyFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.home.TransferredSuccessfullyFragment"
+        android:label="TransferredSuccessfullyFragment"
+        tools:layout="@layout/fragment_transferred_successfully" />
+
+
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_welcomeFragment"
+        app:destination="@id/welcomeFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_registerFragment"
+        app:destination="@id/registerFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_enterPinFragment"
+        app:destination="@id/enterPinFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_loanDetailsFragment"
+        app:destination="@id/loanDetailsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_loanConfirmationFragment"
+        app:destination="@id/loanConfirmationFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_transferredSuccessfullyFragment"
+        app:destination="@id/transferredSuccessfullyFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+
+    <fragment
+        android:id="@+id/passwordResetSuccessFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.home.PasswordResetSuccessFragment"
+        android:label="PasswordResetSuccessFragment" >
+        <action
+            android:id="@+id/action_passwordResetSuccessFragment_to_createPinFragment"
+            app:destination="@id/createPinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateAccountDetailsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.UpdateAccountDetailsFragment"
+        android:label="UpdateAccountDetailsFragment" />
+    <fragment
+        android:id="@+id/sendEmailFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.SendEmailFragment"
+        android:label="SendEmailFragment" />
+    <fragment
+        android:id="@+id/FAQsFragment"
+        android:name="com.cabral.emaishapay.ui.fragments.FAQsFragment"
+        android:label="FAQsFragment" />
+
+</navigation>

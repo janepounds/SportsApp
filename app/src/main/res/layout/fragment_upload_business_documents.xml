@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.fragments.businessInfo.businessDocuments.UploadBusinessDocumentsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5" />
+
+            <include
+                android:id="@+id/layout_owner_info"
+                layout="@layout/layout_info_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                bind:title="@{@string/upload_business_documents}" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/upload_business_documents_subtitle"
+                android:textColor="@color/darkBlue_1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_owner_info" />
+
+            <include
+                android:id="@+id/trade_license"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/trade_license_text}" />
+
+            <include
+                android:id="@+id/registration_certificate"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/registration_certificate}" />
+
+            <include
+                android:id="@+id/tax_reg_certificate"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/tax_reg_certificate}" />
+
+            <include
+                android:id="@+id/tax_clearance_certificate"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/tax_clearance_certificate}" />
+
+            <include
+                android:id="@+id/bank_statement"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/bank_statement}" />
+
+            <include
+                android:id="@+id/audited_financials"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/audited_financials}" />
+
+            <include
+                android:id="@+id/business_plan"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/business_plan}" />
+
+            <include
+                android:id="@+id/receipt_book"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/receipt_book}" />
+
+            <include
+                android:id="@+id/proof_of_assets"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/proof_of_assets}" />
+
+            <include
+                android:id="@+id/credit_reference_report"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/credit_reference_report}" />
+
+            <include
+                android:id="@+id/tax_report"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/tax_report}" />
+
+            <include
+                android:id="@+id/expenditure_report"
+                layout="@layout/layout_upload_document"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                bind:subtitle="@{@string/upload_file_subtitle}"
+                bind:title="@{@string/expenditure_report}" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/edit_text_title_margin_start_end"
+                android:layout_marginTop="@dimen/progress_layout_margin_top"
+                android:layout_marginEnd="@dimen/edit_text_title_margin_start_end"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="trade_license,registration_certificate,tax_reg_certificate,tax_clearance_certificate,bank_statement,audited_financials,business_plan,receipt_book,proof_of_assets,credit_reference_report,tax_report,expenditure_report"
+                app:flow_horizontalGap="16dp"
+                app:flow_horizontalStyle="packed"
+                app:flow_maxElementsWrap="2"
+                app:flow_verticalGap="32dp"
+                app:flow_verticalStyle="packed"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_btn"
+                style="@style/MaterialFilledButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/edit_text_title_margin_start_end"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/save"
+                app:cornerRadius="90dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideline_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/flow" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_and_next_btn"
+                style="@style/MaterialFilledButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="@dimen/edit_text_title_margin_start_end"
+                android:layout_marginBottom="32dp"
+                android:text="@string/save_and_next"
+                android:textColor="@color/primaryColor"
+                android:textStyle="bold"
+                app:backgroundTint="#DBF2FF"
+                app:cornerRadius="90dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline_1"
+                app:layout_constraintTop_toBottomOf="@+id/flow"
+                app:strokeColor="@color/primaryColor"
+                app:strokeWidth="2dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

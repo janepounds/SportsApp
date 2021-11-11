@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Flash Sports</string>
+    <string name="title_coaches">Coaches</string>
+    <string name="title_home">Home</string>
+    <string name="title_account">Account</string>
+    <string name="title_sports_categories">Sports Categories</string>
+    <string name="cancel">Cancel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    /// Splash
+    <string name="app_slogan">Grow your favourite sport through a wide range of professional coaches </string>
+
+    <string name="exit_app">Exit the app?</string>
+    <string name="exit_app_body">Are you sure you want to exit the app?</string>
+    <string name="exit">Exit</string>
+    <string name="ok">OK</string>
+    <string name="okay">OKAY</string>
+    <string name="confirm">Confirm</string>
+
+
+    /// Intro
+    <string name="intro_screen_1">Enjoy unlimited sessions with your favourite coaches</string>
+    <string name="intro_screen_2">Watch free training tutorials and accelerate your skills</string>
+    <string name="intro_screen_3">Explorer through a wide variety of sports and rate your favourite coaches </string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+</resources>

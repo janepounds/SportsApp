@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/register_padding"
+        android:paddingEnd="@dimen/register_padding"
+        android:animateLayoutChanges="true">
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:title="@{@string/back}" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_faq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/faq_title"
+            android:textColor="@color/darkBlue_1"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_faq"
+            app:layout_constraintBottom_toTopOf="@id/save_btn"
+            android:layout_marginBottom="20dp"
+            android:fadeScrollbars="false">
+         <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+             android:layout_marginTop="20dp">
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/layout_faq1"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 android:layout_marginTop="6dp"
+                 android:layout_marginBottom="6dp">
+                 <com.google.android.material.card.MaterialCardView
+                     android:id="@+id/cardview_faq_1"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     app:cardBackgroundColor="#E2EDFD"
+                     app:cardCornerRadius="12dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="@dimen/account_card_content_padding"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent">
+                     <androidx.constraintlayout.widget.ConstraintLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:padding="3dp">
+
+
+
+                         <com.google.android.material.textview.MaterialTextView
+                             android:id="@+id/tv_faq_1"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_marginStart="8dp"
+                             android:layout_marginEnd="8dp"
+                             android:text="@string/faq_1"
+                             android:textColor="#77869E"
+                             android:textStyle="bold"
+                             app:layout_constraintEnd_toStartOf="@+id/right_arrow_faq"
+                             app:layout_constraintStart_toStartOf="parent"
+                             app:layout_constraintTop_toTopOf="parent"
+                             app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                         <ImageView
+                             android:id="@+id/right_arrow_faq"
+                             android:layout_width="24dp"
+                             android:layout_height="24dp"
+                             android:layout_marginEnd="8dp"
+                             android:contentDescription="@string/app_name"
+                             android:padding="4dp"
+                             android:scaleType="fitCenter"
+                             android:src="@drawable/ic_next"
+                             app:layout_constraintBottom_toBottomOf="parent"
+                             app:layout_constraintEnd_toEndOf="parent"
+                             app:layout_constraintTop_toTopOf="parent"
+                             app:tint="@color/grey" />
+
+                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                 </com.google.android.material.card.MaterialCardView>
+                 <com.google.android.material.card.MaterialCardView
+                     android:id="@+id/cardview_faq_answer_1"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     app:cardBackgroundColor="#F0F6FD"
+                     app:cardCornerRadius="12dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="@dimen/account_card_content_padding"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@id/cardview_faq_1"
+                     android:layout_marginTop="4dp"
+                     android:layout_marginBottom="6dp"
+                     android:visibility="gone">
+                     <com.google.android.material.textview.MaterialTextView
+                         android:id="@+id/tv_faq_ans_1"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="8dp"
+                         android:layout_marginEnd="8dp"
+                         android:text="@string/faq_1_answer"
+                         android:textColor="#7F7F7F"
+                         android:textSize="12sp"/>
+                 </com.google.android.material.card.MaterialCardView>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/layout_faq2"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/layout_faq1"
+                 android:layout_marginTop="6dp"
+                 android:layout_marginBottom="6dp">
+
+             <com.google.android.material.card.MaterialCardView
+                 android:id="@+id/cardview_faq_2"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 app:cardBackgroundColor="#E2EDFD"
+                 app:cardCornerRadius="12dp"
+                 app:cardElevation="0dp"
+                 app:contentPadding="@dimen/account_card_content_padding"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 android:layout_marginTop="6dp"
+                 android:layout_marginBottom="6dp">
+                 <androidx.constraintlayout.widget.ConstraintLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:padding="3dp">
+
+                     <com.google.android.material.textview.MaterialTextView
+                         android:id="@+id/tv_faq_2"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="8dp"
+                         android:layout_marginEnd="8dp"
+                         android:text="@string/faq_2"
+                         android:textColor="#77869E"
+                         android:textStyle="bold"
+                         app:layout_constraintEnd_toStartOf="@+id/right_arrow_faq2"
+                         app:layout_constraintStart_toStartOf="parent"
+                         app:layout_constraintTop_toTopOf="parent"
+                         app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                     <ImageView
+                         android:id="@+id/right_arrow_faq2"
+                         android:layout_width="24dp"
+                         android:layout_height="24dp"
+                         android:layout_marginEnd="8dp"
+                         android:contentDescription="@string/app_name"
+                         android:padding="4dp"
+                         android:scaleType="fitCenter"
+                         android:src="@drawable/ic_next"
+                         app:layout_constraintBottom_toBottomOf="parent"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         app:layout_constraintTop_toTopOf="parent"
+                         app:tint="@color/grey" />
+
+                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+             </com.google.android.material.card.MaterialCardView>
+             <com.google.android.material.card.MaterialCardView
+                 android:id="@+id/cardview_faq_answer_2"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 app:cardBackgroundColor="#F0F6FD"
+                 app:cardCornerRadius="12dp"
+                 app:cardElevation="0dp"
+                 app:contentPadding="@dimen/account_card_content_padding"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/cardview_faq_2"
+                 android:layout_marginTop="4dp"
+                 android:layout_marginBottom="6dp"
+                 android:visibility="gone">
+                 <com.google.android.material.textview.MaterialTextView
+                     android:id="@+id/tv_faq_ans_2"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="8dp"
+                     android:layout_marginEnd="8dp"
+                     android:text="@string/faq_2_answer"
+                     android:textColor="#7F7F7F"
+                     android:textSize="12sp"/>
+             </com.google.android.material.card.MaterialCardView>
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/layout_faq3"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/layout_faq2"
+                 android:layout_marginTop="6dp"
+                 android:layout_marginBottom="6dp">
+             <com.google.android.material.card.MaterialCardView
+                 android:id="@+id/cardview_faq_3"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 app:cardBackgroundColor="#E2EDFD"
+                 app:cardCornerRadius="12dp"
+                 app:cardElevation="0dp"
+                 app:contentPadding="@dimen/account_card_content_padding"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 android:layout_marginTop="6dp"
+                 android:layout_marginBottom="6dp">
+                 <androidx.constraintlayout.widget.ConstraintLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:padding="3dp">
+
+
+
+                     <com.google.android.material.textview.MaterialTextView
+                         android:id="@+id/tv_faq_3"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="8dp"
+                         android:layout_marginEnd="8dp"
+                         android:text="@string/faq_3"
+                         android:textColor="#77869E"
+                         android:textStyle="bold"
+                         app:layout_constraintEnd_toStartOf="@+id/right_arrow_faq3"
+                         app:layout_constraintStart_toStartOf="parent"
+                         app:layout_constraintTop_toTopOf="parent"
+                         app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                     <ImageView
+                         android:id="@+id/right_arrow_faq3"
+                         android:layout_width="24dp"
+                         android:layout_height="24dp"
+                         android:layout_marginEnd="8dp"
+                         android:contentDescription="@string/app_name"
+                         android:padding="4dp"
+                         android:scaleType="fitCenter"
+                         android:src="@drawable/ic_next"
+                         app:layout_constraintBottom_toBottomOf="parent"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         app:layout_constraintTop_toTopOf="parent"
+                         app:tint="@color/grey" />
+
+                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+             </com.google.android.material.card.MaterialCardView>
+             <com.google.android.material.card.MaterialCardView
+                 android:id="@+id/cardview_faq_answer_3"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 app:cardBackgroundColor="#F0F6FD"
+                 app:cardCornerRadius="12dp"
+                 app:cardElevation="0dp"
+                 app:contentPadding="@dimen/account_card_content_padding"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/cardview_faq_3"
+                 android:layout_marginTop="4dp"
+                 android:layout_marginBottom="6dp"
+                 android:visibility="gone">
+                 <com.google.android.material.textview.MaterialTextView
+                     android:id="@+id/tv_faq_ans_3"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="8dp"
+                     android:layout_marginEnd="8dp"
+                     android:text="@string/faq_3_answer"
+                     android:textColor="#7F7F7F"
+                     android:textSize="12sp"/>
+             </com.google.android.material.card.MaterialCardView>
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/layout_faq4"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/layout_faq3"
+                 android:layout_marginTop="6dp"
+                 android:layout_marginBottom="6dp">
+                 <com.google.android.material.card.MaterialCardView
+                     android:id="@+id/cardview_faq_4"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     app:cardBackgroundColor="#E2EDFD"
+                     app:cardCornerRadius="12dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="@dimen/account_card_content_padding"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     android:layout_marginTop="6dp"
+                     android:layout_marginBottom="6dp">
+                     <androidx.constraintlayout.widget.ConstraintLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:padding="3dp">
+
+
+
+                         <com.google.android.material.textview.MaterialTextView
+                             android:id="@+id/tv_faq_4"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_marginStart="8dp"
+                             android:layout_marginEnd="8dp"
+                             android:text="@string/faq_4"
+                             android:textColor="#77869E"
+                             android:textStyle="bold"
+                             app:layout_constraintEnd_toStartOf="@+id/right_arrow_faq4"
+                             app:layout_constraintStart_toStartOf="parent"
+                             app:layout_constraintTop_toTopOf="parent"
+                             app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                         <ImageView
+                             android:id="@+id/right_arrow_faq4"
+                             android:layout_width="24dp"
+                             android:layout_height="24dp"
+                             android:layout_marginEnd="8dp"
+                             android:contentDescription="@string/app_name"
+                             android:padding="4dp"
+                             android:scaleType="fitCenter"
+                             android:src="@drawable/ic_next"
+                             app:layout_constraintBottom_toBottomOf="parent"
+                             app:layout_constraintEnd_toEndOf="parent"
+                             app:layout_constraintTop_toTopOf="parent"
+                             app:tint="@color/grey" />
+
+                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                 </com.google.android.material.card.MaterialCardView>
+                 <com.google.android.material.card.MaterialCardView
+                     android:id="@+id/cardview_faq_answer_4"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     app:cardBackgroundColor="#F0F6FD"
+                     app:cardCornerRadius="12dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="@dimen/account_card_content_padding"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@id/cardview_faq_4"
+                     android:layout_marginTop="4dp"
+                     android:layout_marginBottom="6dp"
+                     android:visibility="gone">
+                     <com.google.android.material.textview.MaterialTextView
+                         android:id="@+id/tv_faq_ans_4"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="8dp"
+                         android:layout_marginEnd="8dp"
+                         android:text="@string/faq_4_answer"
+                         android:textColor="#7F7F7F"
+                         android:textSize="12sp"/>
+                 </com.google.android.material.card.MaterialCardView>
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/layout_faq5"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/layout_faq4"
+                 android:layout_marginTop="6dp"
+                 android:layout_marginBottom="6dp">
+                 <com.google.android.material.card.MaterialCardView
+                     android:id="@+id/cardview_faq_5"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     app:cardBackgroundColor="#E2EDFD"
+                     app:cardCornerRadius="12dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="@dimen/account_card_content_padding"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     android:layout_marginTop="6dp"
+                     android:layout_marginBottom="6dp">
+                     <androidx.constraintlayout.widget.ConstraintLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:padding="3dp">
+
+
+
+                         <com.google.android.material.textview.MaterialTextView
+                             android:id="@+id/tv_faq_5"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_marginStart="8dp"
+                             android:layout_marginEnd="8dp"
+                             android:text="@string/faq_5"
+                             android:textColor="#77869E"
+                             android:textStyle="bold"
+                             app:layout_constraintEnd_toStartOf="@+id/right_arrow_faq5"
+                             app:layout_constraintStart_toStartOf="parent"
+                             app:layout_constraintTop_toTopOf="parent"
+                             app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                         <ImageView
+                             android:id="@+id/right_arrow_faq5"
+                             android:layout_width="24dp"
+                             android:layout_height="24dp"
+                             android:layout_marginEnd="8dp"
+                             android:contentDescription="@string/app_name"
+                             android:padding="4dp"
+                             android:scaleType="fitCenter"
+                             android:src="@drawable/ic_next"
+                             app:layout_constraintBottom_toBottomOf="parent"
+                             app:layout_constraintEnd_toEndOf="parent"
+                             app:layout_constraintTop_toTopOf="parent"
+                             app:tint="@color/grey" />
+
+                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                 </com.google.android.material.card.MaterialCardView>
+                 <com.google.android.material.card.MaterialCardView
+                     android:id="@+id/cardview_faq_answer_5"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     app:cardBackgroundColor="#F0F6FD"
+                     app:cardCornerRadius="12dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="@dimen/account_card_content_padding"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@id/cardview_faq_5"
+                     android:layout_marginTop="4dp"
+                     android:layout_marginBottom="6dp"
+                     android:visibility="gone">
+                     <com.google.android.material.textview.MaterialTextView
+                         android:id="@+id/tv_faq_ans_5"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="8dp"
+                         android:layout_marginEnd="8dp"
+                         android:text="@string/faq_5_answer"
+                         android:textColor="#7F7F7F"
+                         android:textSize="12sp"/>
+                 </com.google.android.material.card.MaterialCardView>
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/layout_faq6"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@id/layout_faq5"
+                 android:layout_marginTop="6dp"
+                 android:layout_marginBottom="6dp">
+                 <com.google.android.material.card.MaterialCardView
+                     android:id="@+id/cardview_faq_6"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     app:cardBackgroundColor="#E2EDFD"
+                     app:cardCornerRadius="12dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="@dimen/account_card_content_padding"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     android:layout_marginTop="6dp"
+                     android:layout_marginBottom="6dp">
+                     <androidx.constraintlayout.widget.ConstraintLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:padding="3dp">
+
+
+
+                         <com.google.android.material.textview.MaterialTextView
+                             android:id="@+id/tv_faq_6"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_marginStart="8dp"
+                             android:layout_marginEnd="8dp"
+                             android:text="@string/faq_6"
+                             android:textColor="#77869E"
+                             android:textStyle="bold"
+                             app:layout_constraintEnd_toStartOf="@+id/right_arrow_faq6"
+                             app:layout_constraintStart_toStartOf="parent"
+                             app:layout_constraintTop_toTopOf="parent"
+                             app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                         <ImageView
+                             android:id="@+id/right_arrow_faq6"
+                             android:layout_width="24dp"
+                             android:layout_height="24dp"
+                             android:layout_marginEnd="8dp"
+                             android:contentDescription="@string/app_name"
+                             android:padding="4dp"
+                             android:scaleType="fitCenter"
+                             android:src="@drawable/ic_next"
+                             app:layout_constraintBottom_toBottomOf="parent"
+                             app:layout_constraintEnd_toEndOf="parent"
+                             app:layout_constraintTop_toTopOf="parent"
+                             app:tint="@color/grey" />
+
+                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                 </com.google.android.material.card.MaterialCardView>
+                 <com.google.android.material.card.MaterialCardView
+                     android:id="@+id/cardview_faq_answer_6"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     app:cardBackgroundColor="#F0F6FD"
+                     app:cardCornerRadius="12dp"
+                     app:cardElevation="0dp"
+                     app:contentPadding="@dimen/account_card_content_padding"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toBottomOf="@id/cardview_faq_6"
+                     android:layout_marginTop="4dp"
+                     android:layout_marginBottom="6dp"
+                     android:visibility="gone">
+                     <com.google.android.material.textview.MaterialTextView
+                         android:id="@+id/tv_faq_ans_6"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="8dp"
+                         android:layout_marginEnd="8dp"
+                         android:text="@string/faq_6_answer"
+                         android:textColor="#7F7F7F"
+                         android:textSize="12sp"/>
+                 </com.google.android.material.card.MaterialCardView>
+
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_btn"
+            style="@style/MaterialFilledButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/edit_text_title_margin_start_end"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/submit_your_questions"
+            app:cornerRadius="90dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

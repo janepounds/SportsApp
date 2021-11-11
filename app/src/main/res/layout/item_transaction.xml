@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.cabral.emaishapay.data.models.Transaction" />
+
+        <variable
+            name="transaction"
+            type="com.cabral.emaishapay.data.models.Transaction" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/success_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_check"
+            android:tint="@color/primaryColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/trans_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{@string/txn_id(transaction.txnId)}"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintEnd_toStartOf="@+id/amt"
+            app:layout_constraintStart_toEndOf="@+id/success_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Txn ID: 1000134780192" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/trans_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@{transaction.txnDate}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/trans_id"
+            app:layout_constraintStart_toEndOf="@+id/success_image"
+            app:layout_constraintTop_toBottomOf="@+id/trans_id"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="25 July 2021, 05:40pm" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/amt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/trans_id"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="UGX 75000" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

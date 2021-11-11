@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.fragments.home.NewLoanFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_calculator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/calculator"
+            android:textColor="@color/darkBlue_1"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/calculator_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:contentPadding="14dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_calculator">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/divider8"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_amt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:text="@string/amount"
+                    android:textSize="@dimen/button_text"
+                    app:layout_constraintEnd_toStartOf="@+id/divider8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amt_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/primaryColor"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minWidth="100dp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_amt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_amt"
+                    tools:text="5355" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/ugx"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/button_text"
+                    app:drawableStartCompat="@drawable/ic_uganda"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_amt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/amt_edit_text" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_duration_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/duration"
+                    android:textSize="@dimen/button_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/duration_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/primaryColor"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:minWidth="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider8"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_duration_text"
+                    tools:text="5" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/divider8"
+                    app:layout_constraintTop_toBottomOf="@+id/duration_edit_text">
+
+                    <ImageView
+                        android:id="@+id/calendar_image"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_calendar_check"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/primaryColor" />
+
+                    <com.skydoves.powerspinner.PowerSpinnerView
+                        android:id="@+id/spinner_duration"
+                        style="@style/PowerSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:hint="@string/select"
+                        android:paddingStart="8dp"
+                        android:paddingTop="0dp"
+                        android:paddingEnd="0dp"
+                        android:paddingBottom="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/calendar_image"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:spinner_arrow_padding="0dp"
+                        app:spinner_item_array="@array/duration" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/enter_btn"
+            style="@style/MaterialFilledButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/enter"
+            android:textStyle="bold"
+            app:cornerRadius="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calculator_card_view" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/amount_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enter_btn"
+            app:layout_constraintVertical_bias="0.0"
+            app:strokeColor="@color/primaryColor"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="end"
+                    app:constraint_referenced_ids="tv_due_amt,tv_interest_rate,tv_processing_fee,tv_duration,tv_payment" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_due_amt"
+                    style="@style/ConfirmationDialogTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/due_amount"
+                    app:layout_constraintBottom_toBottomOf="@+id/value_due_amt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/value_due_amt" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_interest_rate"
+                    style="@style/ConfirmationDialogTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/interest_rate"
+                    app:layout_constraintBottom_toBottomOf="@+id/value_interest_rate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_due_amt"
+                    app:layout_constraintTop_toTopOf="@+id/value_interest_rate" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_processing_fee"
+                    style="@style/ConfirmationDialogTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/processing_fee"
+                    app:layout_constraintBottom_toBottomOf="@+id/value_processing_fee"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_interest_rate"
+                    app:layout_constraintTop_toTopOf="@+id/value_processing_fee" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_duration"
+                    style="@style/ConfirmationDialogTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/duration"
+                    app:layout_constraintBottom_toBottomOf="@+id/value_duration"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_processing_fee"
+                    app:layout_constraintTop_toTopOf="@+id/value_duration" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_payment"
+                    style="@style/ConfirmationDialogTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/payment"
+                    app:layout_constraintBottom_toBottomOf="@+id/value_payment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_duration"
+                    app:layout_constraintTop_toTopOf="@+id/value_payment" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/value_due_amt"
+                    style="@style/ConfirmationDialogTextView"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="@color/red"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/barrier"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/hint_balance_text" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/value_interest_rate"
+                    style="@style/ConfirmationDialogTextView"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/barrier"
+                    app:layout_constraintTop_toBottomOf="@+id/value_due_amt"
+                    tools:text="10%" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/value_processing_fee"
+                    style="@style/ConfirmationDialogTextView"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/barrier"
+                    app:layout_constraintTop_toBottomOf="@+id/value_interest_rate"
+                    tools:text="@string/hint_balance_text" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/value_duration"
+                    style="@style/ConfirmationDialogTextView"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/barrier"
+                    app:layout_constraintTop_toBottomOf="@+id/value_processing_fee"
+                    tools:text="05 Weeks" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/value_payment"
+                    style="@style/ConfirmationDialogTextView"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/barrier"
+                    app:layout_constraintTop_toBottomOf="@+id/value_duration"
+                    tools:text="@string/hint_balance_text" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/apply_btn"
+                    style="@style/MaterialFilledButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:paddingStart="56dp"
+                    android:paddingEnd="56dp"
+                    android:text="@string/apply"
+                    android:textStyle="bold"
+                    app:cornerRadius="90dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/value_payment" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

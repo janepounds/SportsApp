@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <import type="android.view.View" />
+
+    <variable
+        name="isLogin"
+        type="Boolean" />
+
+    <variable
+        name="title"
+        type="String" />
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:context=".ui.fragments.EnterPinFragment">
+
+    <include
+        android:id="@+id/toolbar_layout"
+        layout="@layout/layout_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:visibility="@{isLogin ? View.GONE : View.VISIBLE, default=gone}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        bind:title="@{title}"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/close_btn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/register_padding"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/app_name"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_close"
+        android:visibility="@{isLogin ? View.VISIBLE : View.GONE, default=visible}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/darkGrey" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingStart="@dimen/register_padding"
+        android:paddingEnd="@dimen/register_padding"
+        app:layout_constraintBottom_toTopOf="@+id/keypad_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_enter_pin"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="@string/enter_pin"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="24sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/et_enter_pin"
+          style="@style/OutlinedEditTextStyleNonDense"
+          android:layout_width="0dp"
+          android:layout_height="64dp"
+          android:layout_marginTop="16dp"
+          app:hintEnabled="false"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tv_enter_pin"
+          app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/enter_pin_hint"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:textColor="@color/black" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <View
+          android:id="@+id/divider"
+          android:layout_width="1dp"
+          android:layout_height="0dp"
+          android:layout_marginTop="24dp"
+          android:background="@color/darkBlue_1"
+          app:layout_constraintBottom_toBottomOf="@+id/forget_pin_tv"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/et_enter_pin" />
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/forget_pin_tv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="16dp"
+          android:text="@string/forget_pin"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toStartOf="@+id/divider"
+          app:layout_constraintHorizontal_bias="1.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/divider" />
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/click_here_tv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:text="@string/click_here"
+          android:textColor="@color/primaryColor"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toEndOf="@+id/divider"
+          app:layout_constraintTop_toTopOf="@+id/divider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/keypad_layout"
+        layout="@layout/layout_keypad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.cabral.emaishapay.data.models.screen.CreditFactorItem" />
+
+        <variable
+            name="creditFactorItem"
+            type="CreditFactorItem" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/indicator_color"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="6dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/circle_shape"
+            app:imageTintColor="@{creditFactorItem.color}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/indicator_name"
+            app:layout_constraintVertical_bias="0.0"
+            tools:tint="@color/green" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/indicator_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{creditFactorItem.title}"
+            android:textColor="@color/darkBlue_1"
+            android:textSize="@dimen/button_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/image_add"
+            app:layout_constraintStart_toEndOf="@+id/indicator_color"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/business_profile" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/indicator_percentage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{@string/interest_rate_value(creditFactorItem.percentage)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/indicator_name"
+            app:layout_constraintStart_toStartOf="@+id/indicator_name"
+            app:layout_constraintTop_toBottomOf="@+id/indicator_name"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="15%" />
+
+        <ImageView
+            android:id="@+id/image_add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/indicator_name"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_description"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/indicator_percentage"
+                app:layout_constraintStart_toStartOf="@id/indicator_percentage"
+                app:layout_constraintTop_toBottomOf="@+id/indicator_percentage">
+
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/description"
+                    style="@style/ExpandableLayoutTextView"
+                    android:layout_width="0dp"
+                    android:text="@string/description_placeholder"
+                    android:textColor="@color/grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

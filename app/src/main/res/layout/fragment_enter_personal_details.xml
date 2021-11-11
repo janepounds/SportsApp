@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fillViewport="true"
+      tools:context=".ui.fragments.businessInfo.ownerProfile.EnterPersonalDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <androidx.constraintlayout.widget.Guideline
+          android:id="@+id/guideline_1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintGuide_percent=".5" />
+
+      <include
+          android:id="@+id/progress_layout"
+          layout="@layout/layout_owner_info_progress"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          bind:progress="@{1}"
+          bind:title="@{@string/enter_owners_info}" />
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_full_name"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/edit_text_title_margin_start_end"
+          android:layout_marginTop="@dimen/progress_layout_margin_top"
+          android:layout_marginEnd="@dimen/edit_text_title_margin_start_end"
+          android:text="@string/full_name"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/progress_layout" />
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/et_full_name"
+          style="@style/OutlinedEditTextStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:hintEnabled="false"
+          app:layout_constraintEnd_toEndOf="@+id/tv_full_name"
+          app:layout_constraintStart_toStartOf="@+id/tv_full_name"
+          app:layout_constraintTop_toBottomOf="@+id/tv_full_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/full_name_hint"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_text_size" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_gender"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_title_margin_top"
+          android:layout_marginEnd="@dimen/edit_text_margin_start_end"
+          android:text="@string/gender"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="@id/guideline_1"
+          app:layout_constraintStart_toStartOf="@+id/tv_full_name"
+          app:layout_constraintTop_toBottomOf="@+id/et_full_name" />
+
+      <com.skydoves.powerspinner.PowerSpinnerView
+          android:id="@+id/spinner_gender"
+          style="@style/PowerSpinner"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:layout_constraintEnd_toEndOf="@+id/tv_gender"
+          app:layout_constraintStart_toStartOf="@+id/tv_full_name"
+          app:layout_constraintTop_toBottomOf="@+id/tv_gender"
+          app:spinner_item_array="@array/gender" />
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_date_of_birth"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/edit_text_margin_start_end"
+          android:text="@string/date_of_birth"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="@+id/tv_full_name"
+          app:layout_constraintStart_toStartOf="@+id/guideline_1"
+          app:layout_constraintTop_toTopOf="@+id/tv_gender" />
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/et_date_of_birth"
+          style="@style/OutlinedEditTextStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:hintEnabled="false"
+          app:layout_constraintEnd_toEndOf="@+id/tv_full_name"
+          app:layout_constraintStart_toStartOf="@+id/tv_date_of_birth"
+          app:layout_constraintTop_toBottomOf="@+id/tv_date_of_birth">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="16dp"
+            android:drawableTint="@color/primaryColor"
+            android:hint="@string/date_of_birth_hint"
+            android:inputType="date"
+            android:maxLength="10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_text_size" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_education_level"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_title_margin_top"
+          android:text="@string/education_level"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="@+id/tv_full_name"
+          app:layout_constraintStart_toStartOf="@+id/tv_full_name"
+          app:layout_constraintTop_toBottomOf="@+id/spinner_gender" />
+
+      <com.skydoves.powerspinner.PowerSpinnerView
+          android:id="@+id/spinner_education_level"
+          style="@style/PowerSpinner"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:layout_constraintEnd_toEndOf="@+id/tv_full_name"
+          app:layout_constraintStart_toStartOf="@+id/tv_full_name"
+          app:layout_constraintTop_toBottomOf="@+id/tv_education_level"
+          app:spinner_item_array="@array/education_level" />
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_marital_status"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_title_margin_top"
+          android:text="@string/marital_status"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="@+id/tv_full_name"
+          app:layout_constraintStart_toStartOf="@+id/tv_full_name"
+          app:layout_constraintTop_toBottomOf="@+id/spinner_education_level" />
+
+      <com.skydoves.powerspinner.PowerSpinnerView
+          android:id="@+id/spinner_marital_status"
+          style="@style/PowerSpinner"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:layout_constraintEnd_toEndOf="@+id/tv_full_name"
+          app:layout_constraintStart_toStartOf="@+id/tv_full_name"
+          app:layout_constraintTop_toBottomOf="@+id/tv_marital_status"
+          app:spinner_item_array="@array/marital_status" />
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_no_of_dependants"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_title_margin_top"
+          android:layout_marginEnd="@dimen/edit_text_margin_start_end"
+          android:text="@string/no_of_dependants"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="@id/tv_full_name"
+          app:layout_constraintStart_toStartOf="@+id/tv_full_name"
+          app:layout_constraintTop_toBottomOf="@+id/spinner_marital_status" />
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/et_no_of_dependants"
+          style="@style/OutlinedEditTextStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:hintEnabled="false"
+          app:layout_constraintEnd_toEndOf="@+id/tv_full_name"
+          app:layout_constraintStart_toStartOf="@+id/tv_full_name"
+          app:layout_constraintTop_toBottomOf="@+id/tv_no_of_dependants">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/no_of_dependants"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_text_size" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_year_in_business"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_title_margin_top"
+          android:text="@string/years_in_business"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="@id/tv_gender"
+          app:layout_constraintStart_toStartOf="@+id/tv_gender"
+          app:layout_constraintTop_toBottomOf="@+id/et_no_of_dependants" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/et_year_in_business_layout"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          android:background="@drawable/slider_bg_with_stroke_2"
+          app:layout_constraintBottom_toBottomOf="@id/et_national_id"
+          app:layout_constraintEnd_toEndOf="@id/tv_gender"
+          app:layout_constraintStart_toStartOf="@+id/tv_gender"
+          app:layout_constraintTop_toBottomOf="@+id/tv_year_in_business">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_year_in_business"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:inputType="number"
+              android:maxLength="3"
+              android:textColor="@color/black"
+              android:textSize="@dimen/edit_text_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_years"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_years"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="@string/years"
+            android:textColor="@color/darkBlue_1"
+            android:textSize="@dimen/edit_text_title_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tv_national_id"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_title_margin_top"
+          android:text="@string/national_id"
+          android:textColor="@color/darkBlue_1"
+          android:textSize="@dimen/edit_text_title_size"
+          app:layout_constraintEnd_toEndOf="@+id/tv_date_of_birth"
+          app:layout_constraintStart_toStartOf="@+id/tv_date_of_birth"
+          app:layout_constraintTop_toBottomOf="@+id/et_no_of_dependants" />
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/et_national_id"
+          style="@style/OutlinedEditTextStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/edit_text_margin_top"
+          app:hintEnabled="false"
+          app:layout_constraintEnd_toEndOf="@+id/tv_date_of_birth"
+          app:layout_constraintStart_toStartOf="@+id/tv_date_of_birth"
+          app:layout_constraintTop_toBottomOf="@+id/tv_national_id">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/enter_nin"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_text_size" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/save_btn"
+          style="@style/MaterialFilledButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/edit_text_title_margin_start_end"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginBottom="32dp"
+          android:text="@string/save"
+          app:cornerRadius="90dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="@id/guideline_1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/et_national_id" />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/save_and_next_btn"
+          style="@style/MaterialFilledButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="@dimen/edit_text_title_margin_start_end"
+          android:layout_marginBottom="32dp"
+          android:text="@string/save_and_next"
+          android:textColor="@color/primaryColor"
+          android:textStyle="bold"
+          app:backgroundTint="#DBF2FF"
+          app:cornerRadius="90dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="@id/guideline_1"
+          app:layout_constraintTop_toBottomOf="@+id/et_national_id"
+          app:strokeColor="@color/primaryColor"
+          app:strokeWidth="2dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </ScrollView>
+
+</layout>

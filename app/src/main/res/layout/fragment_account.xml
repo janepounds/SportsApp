@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="appVersion"
+            type="String" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ui.fragments.navigation.AccountFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/layout_account_above"
+                layout="@layout/layout_account_above"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/layout_customer_support"
+                layout="@layout/layout_account_customer_support_expandable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_account_above" />
+
+
+            <include
+                android:id="@+id/layout_account_categories"
+                layout="@layout/layout_account_categories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_customer_support" />
+
+            <include
+                android:id="@+id/layout_loan_policy"
+                layout="@layout/layout_account_customer_support_expandable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_account_categories" />
+
+            <ImageView
+                android:id="@+id/rate_image_1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_star"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_loan_policy" />
+
+            <ImageView
+                android:id="@+id/rate_image_2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_star"
+                app:layout_constraintBottom_toBottomOf="@+id/rate_image_1"
+                app:layout_constraintStart_toEndOf="@+id/rate_image_1"
+                app:layout_constraintTop_toTopOf="@+id/rate_image_1" />
+
+            <ImageView
+                android:id="@+id/rate_image_3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_star"
+                app:layout_constraintBottom_toBottomOf="@+id/rate_image_2"
+                app:layout_constraintStart_toEndOf="@+id/rate_image_2"
+                app:layout_constraintTop_toTopOf="@+id/rate_image_2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rate_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/rate_app"
+                android:textColor="@color/darkBlue_1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/rate_image_3"
+                app:layout_constraintStart_toEndOf="@+id/rate_image_3"
+                app:layout_constraintTop_toTopOf="@+id/rate_image_3" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/app_version_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="8dp"
+                android:text="@{@string/app_version(appVersion)}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rate_app"
+                tools:text="@string/app_version" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/share_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/primaryColor"
+                android:gravity="center_vertical"
+                android:text="@string/share_app"
+                android:textColor="@color/darkBlue_1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rate_image_3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logout_btn"
+                style="@style/MaterialFilledButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/log_out"
+                android:textColor="@color/primaryColor"
+                android:textStyle="bold"
+                app:backgroundTint="#DBF2FF"
+                app:cornerRadius="90dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/app_version_text"
+                app:layout_constraintVertical_bias="-.0"
+                app:layout_constraintWidth_percent=".5"
+                app:strokeColor="@color/primaryColor"
+                app:strokeWidth="2dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>
