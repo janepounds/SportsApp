@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY appname "eMaisha Pay"><!ENTITY currency "₹"><!ENTITY asterisk "＊">]>
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY appname "Flash Sports"><!ENTITY currency "₹"><!ENTITY asterisk "＊">]>
 <resources>
     <string name="app_name">&appname;</string>
-    <string name="app_name_first_part">eMaisha</string>
-    <string name="app_name_second_part">Pay</string>
+    <string name="app_name_first_part">Flash</string>
+    <string name="app_name_second_part">Sports</string>
 
     /// Titles
     <string name="title_home">Home</string>
