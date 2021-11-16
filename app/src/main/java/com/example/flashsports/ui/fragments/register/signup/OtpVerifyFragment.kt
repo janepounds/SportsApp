@@ -126,7 +126,7 @@ class OtpVerifyFragment : BaseFragment<FragmentOtpVerifyBinding>() {
 
     override fun setupClickListeners() {
         binding.toolbarLayout.backBtn.setOnClickListener { requireActivity().onBackPressed() }
-        binding.tvResendCode.setOnClickListener { resendCode() }
+        binding.tvResendCode.setOnClickListener {  }
         binding.continueBtn.setOnClickListener { checkInputs() }
     }
 
@@ -140,47 +140,6 @@ class OtpVerifyFragment : BaseFragment<FragmentOtpVerifyBinding>() {
 
 
 
-    private fun resendCode() {
-        if (timeLeft == 0) {
-            /***************Retrofit call for resend otp**************************/
-            var call: Call<RegistrationResponse>? = apiRequests?.resendOtp(
-                Prefs.getString("phoneNumber"),
-                "resendUserOTP",
-                generateRequestId()
-
-            )
-            call!!.enqueue(object : Callback<RegistrationResponse> {
-                override fun onResponse(
-                    call: Call<RegistrationResponse>,
-                    response: Response<RegistrationResponse>
-                ) {
-                    if (response.isSuccessful) {
-
-                        if (response.body()!!.status == 1) {
-
-
-                        }else{
-                            response.body()!!.message?.let { binding.root.snackbar(it) }
-                        }
-
-                    } else {
-                        response.body()!!.message?.let { binding.root.snackbar(it) }
-                    }
-
-                }
-
-                override fun onFailure(call: Call<RegistrationResponse>, t: Throwable) {
-                    t.message?.let { binding.root.snackbar(it) }
-
-                }
-            })
-
-
-
-        } else {
-            binding.root.snackbar("Please wait. You can resend otp again after $timeLeft seconds.")
-        }
-    }
 
     private fun checkInputs() {
         val otp1 = binding.etOtp1.editText?.text.toString().trim()

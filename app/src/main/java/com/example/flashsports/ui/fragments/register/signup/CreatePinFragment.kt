@@ -88,145 +88,15 @@ class CreatePinFragment : BaseFragment<FragmentCreatePinBinding>() {
 
         when (loginType) {
             CreatePinType.SIGNUP -> {
-
-                /*************Retrofit call to verify otp******************************/
-                dialogLoader?.showProgressDialog()
-                var call: Call<AuthenticationResponse>? = apiRequests?.verifyRegistration(
-                    mViewModel.getOtp(),
-                    Prefs.getString("phoneNumber"),
-                    "verifyUserRegistration",
-                    generateRequestId(),
-                    Constants.PREPIN + pin
-
+                /**********navigate to home fragment**************/
+                navController.navigateUsingPopUp(
+                    R.id.welcomeFragment,
+                    R.id.action_global_homeFragment
                 )
-                call!!.enqueue(object : Callback<AuthenticationResponse> {
-                    override fun onResponse(
-                        call: Call<AuthenticationResponse>,
-                        response: Response<AuthenticationResponse>
-                    ) {
-                        if (response.isSuccessful) {
-                            dialogLoader?.hideProgressDialog()
-                            if (response.body()!!.status == 1) {
-                                /***************save user details and login user***************/
-                                lifecycleScope.launch {
-                                    response.body()?.let {
-                                        Prefs.putString("token",it!!.access_token)
-                                        Prefs.putString("pin",pin)
-                                        Prefs.putString("user_id", it!!.data!!.id.toString())
-                                        Prefs.putString("name",it!!.data?.name)
-                                        Prefs.putString("phoneNumber",it!!.data?.phoneNumber)
-                                        Prefs.putString("email",it!!.data?.email)
-                                        Prefs.putString("balance",it!!.data?.balance.toString())
-                                        Prefs.putString("interest_rate",it!!.data?.interest_rate.toString())
-                                        Prefs.putString("processing_fee",
-                                            it!!.data?.processing_fee.toString()
-                                        )
-                                        Prefs.putString(
-                                            "token_expiry",
-                                            it!!.time_expiry
-                                        )
-                                        Prefs.putString("payment_due", it!!.data?.payment_due.toString())
-                                        Prefs.putString("payment_due_date",it!!.data?.payment_due_date)
-                                        userPreferences.saveIsLoggedIn(true)
-
-                                    }
-                                }
-
-                                /**********navigate to home fragment**************/
-                                navController.navigateUsingPopUp(
-                                    R.id.welcomeFragment,
-                                    R.id.action_global_homeFragment
-                                )
-                            } else {
-                                response.body()!!.message?.let { binding.root.snackbar(it) }
-                            }
-
-                        }else {
-                            response.body()!!.message?.let { binding.root.snackbar(it) }
-                        }
-
-                    }
-
-                    override fun onFailure(call: Call<AuthenticationResponse>, t: Throwable) {
-                        t.message?.let { binding.root.snackbar(it) }
-                        dialogLoader?.hideProgressDialog()
-
-                    }
-                })
-
 
             }
             CreatePinType.FORGOT_PIN -> {
-                /***************save new user data and navigate to home***************/
-                dialogLoader?.showProgressDialog()
-                var call: Call<AuthenticationResponse>? = apiRequests?.confirmPin(
-                    Prefs.getString("phoneNumber"),
-                    generateRequestId(),
-                    "comfirmForgotPin",
-                    mViewModel.getOtp(),
-                    Constants.PREPIN+pin,
-                )
-                call!!.enqueue(object : Callback<AuthenticationResponse> {
-                    override fun onResponse(
-                        call: Call<AuthenticationResponse>,
-                        response: Response<AuthenticationResponse>
-                    ) {
-                        if (response.isSuccessful) {
-                            dialogLoader?.hideProgressDialog()
-                            if (response.body()!!.status == 1) {
 
-                                /***************save user details and login user***************/
-                                lifecycleScope.launch {
-                                    response.body()?.let {
-                                        Prefs.putString("token",it!!.access_token)
-                                        Prefs.putString("pin",pin)
-                                        Prefs.putString("user_id", it!!.data!!.id.toString())
-                                        Prefs.putString("name",it!!.data?.name)
-                                        Prefs.putString("phoneNumber",it!!.data?.phoneNumber)
-                                        Prefs.putString("email",it!!.data?.email)
-                                        Prefs.putString("balance",it!!.data?.balance.toString())
-                                        Prefs.putString("interest_rate",it!!.data?.interest_rate.toString())
-                                        Prefs.putString("processing_fee",
-                                            it!!.data?.processing_fee.toString()
-                                        )
-                                        Prefs.putString(
-                                            "token_expiry",
-                                            it!!.time_expiry
-                                        )
-                                        Prefs.putString("payment_due", it!!.data?.payment_due.toString())
-                                        Prefs.putString("payment_due_date",it!!.data?.payment_due_date)
-                                        userPreferences.saveIsLoggedIn(true)
-
-                                    }
-                                }
-
-                                /**********navigate to home fragment**************/
-                                navController.navigateUsingPopUp(
-                                    R.id.welcomeFragment,
-                                    R.id.action_global_homeFragment
-                                )
-                            } else {
-                                  if(response.body()!!.message?.isNotEmpty()) {
-                                    response.body()!!.message?.let { binding.root.snackbar(it) }
-                                    dialogLoader?.hideProgressDialog()
-                                }
-
-                            }
-
-                        } else {  if(response.body()!!.message?.isNotEmpty()) {
-                            response.body()!!.message?.let { binding.root.snackbar(it) }
-                            dialogLoader?.hideProgressDialog()
-                        }
-                        }
-
-                    }
-
-                    override fun onFailure(call: Call<AuthenticationResponse>, t: Throwable) {
-                        t.message?.let { binding.root.snackbar(it) }
-                        dialogLoader?.hideProgressDialog()
-
-                    }
-                })
 
             }
         }

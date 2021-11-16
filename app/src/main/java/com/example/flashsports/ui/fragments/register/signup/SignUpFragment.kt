@@ -32,7 +32,7 @@ import retrofit2.Response
 class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
 
     private val mViewModel: LoginViewModel by activityViewModels()
-//    private var apiRequests: ApiRequests = getIn
+
 
     private val apiRequests: ApiRequests? by lazy { ApiClient.getLoanInstance() }
     private var dialogLoader: DialogLoader? = null
@@ -75,43 +75,6 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
         Prefs.putString("phoneNumber",getString(R.string.phone_code)+phoneNumber)
 
 
-        /*****************Retrofit call for sending otp******************************/
-        var call: Call<RegistrationResponse>? = apiRequests?.signUp(
-            generateRequestId(),
-            "registerUser",
-            fullName,
-            getString(R.string.phone_code)+ phoneNumber,
-            emailAddress
-        )
-        call!!.enqueue(object : Callback<RegistrationResponse> {
-            override fun onResponse(
-                call: Call<RegistrationResponse>,
-                response: Response<RegistrationResponse>
-            ) {
-                if (response.isSuccessful) {
-                    dialogLoader?.hideProgressDialog()
-                    if (response.body()!!.status == 1) {
-
-
-                        /**********navigate to otp fragment**************/
-                        navController.navigate(R.id.action_registerFragment_to_otpVerifyFragment, bundleOf(
-                            Config.CREATE_PIN_TYPE to CreatePinType.SIGNUP))
-                    }else{
-                        response.body()!!.message?.let { binding.root.snackbar(it) }
-                    }
-
-                } else {
-                    response.body()!!.message?.let { binding.root.snackbar(it) }
-                }
-
-            }
-
-            override fun onFailure(call: Call<RegistrationResponse>, t: Throwable) {
-                t.message?.let { binding.root.snackbar(it) }
-                dialogLoader?.hideProgressDialog()
-
-            }
-        })
 
 
     }
