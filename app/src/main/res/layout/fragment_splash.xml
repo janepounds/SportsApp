@@ -28,7 +28,7 @@
             android:contentDescription="@string/app_name"
             android:paddingBottom="16dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/app_logo"
+            android:src="@drawable/ic_app_logo"
             app:layout_constraintHeight_percent=".3" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -42,7 +42,7 @@
             android:textStyle="bold"
             app:autoSizeTextType="uniform"
             app:layout_constraintHeight_percent=".1"
-            tools:text="eMaisha Pay" />
+            tools:text="Flash Sports" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/app_slogan"

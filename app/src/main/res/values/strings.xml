@@ -38,13 +38,13 @@
     <string name="freshchat_file_provider_authority">com.cabral.emaishapay.provider</string>
 
     /// Splash
-    <string name="app_slogan">Grow your Business with quick and Affordable Loans</string>
+    <string name="app_slogan">Grow your favourite sport through a wide range of professional coaches </string>
 
 
     /// Intro
-    <string name="intro_screen_1">Easy and Flexible Business Loans to match your Business Needs</string>
-    <string name="intro_screen_2">Money on Demand to Cover unexpected cash Flow gaps and keep your Business Moving</string>
-    <string name="intro_screen_3">Fast decision and Funding Possible in 24 Hours no Asset Security required Upfront</string>
+    <string name="intro_screen_1">Enjoy unlimited sessions with your favourite coaches</string>
+    <string name="intro_screen_2">Watch free training tutorials and accelerate your skills</string>
+    <string name="intro_screen_3">Explorer through a wide variety of sports and rate your favourite coaches </string>
     <string name="next">Next</string>
     <string name="skip">Skip</string>
 

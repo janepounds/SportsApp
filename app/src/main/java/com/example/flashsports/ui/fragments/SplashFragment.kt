@@ -53,7 +53,6 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
     override fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?) = FragmentSplashBinding.inflate(inflater, container, false)
 
     override fun setupTheme() {
-        requestStaticPagesData()
         if (!hasPermissions(requireContext(), *PERMISSIONS)) {
             ActivityCompat.requestPermissions(requireActivity(), PERMISSIONS, PERMISSION_ALL)
         }
@@ -91,48 +90,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
         }
     }
 
-    private fun requestStaticPagesData(){
 
-        Constants.LOAN_DISCLOSURE = getString(R.string.loren_ipsum)
-        Constants.TERMS_SERVICES = getString(R.string.loren_ipsum)
-        Constants.LOAN_AGREEMENT = getString(R.string.loren_ipsum)
-        Constants.RECOVERY_POLICY = getString(R.string.loren_ipsum)
-        Constants.TERMS_AND_CONDITIONS = getString(R.string.loren_ipsum)
-
-        var call: Call<StaticPagesResponse>? = apiRequests?.getStaticPages(generateRequestId(),"getStaticPages")
-
-        try {
-            call!!.enqueue(object : Callback<StaticPagesResponse> {
-                override fun onResponse(
-                    call: Call<StaticPagesResponse>,
-                    response: Response<StaticPagesResponse>
-                ) {
-                    if (response.isSuccessful) {
-                        if (response.body()!!.status == 1) {
-                            response.body()!!.pagesData.let {
-                                Constants.TERMS_AND_CONDITIONS = it!!.terms_and_conditions
-                                Constants.LOAN_AGREEMENT = it!!.loan_agreement
-                                Constants.RECOVERY_POLICY = it!!.recovery_policy
-                            }
-                        }
-
-                    } else {
-                        response.body()!!.message?.let { binding.root.snackbar(it) }
-                    }
-                }
-
-                    override fun onFailure(call: Call<StaticPagesResponse>, t: Throwable) {
-//                        t.message?.let { binding.root.snackbar(it) }
-
-                }
-            })
-
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-
-
-    }
 
     private fun hasPermissions(context: Context, vararg permissions: String): Boolean = permissions.all {
         ActivityCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
